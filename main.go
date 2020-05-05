@@ -1,28 +1,41 @@
 package main
 
 import (
-    "log"
-    "net/http"
-    "gopkg.in/macaron.v1"
+	"log"
+	"net/http"
+
+	"gopkg.in/macaron.v1"
 )
 
 func main() {
-    m := macaron.Classic()
-    m.Use(macaron.Renderer())
+	m := macaron.Classic()
+	m.Use(macaron.Renderer())
 
-    m.Get("/", homeHandler)
-    m.Get("/about", aboutHandler)
+	m.Get("/", homeHandler)
+	m.Get("/projects", projectsHandler)
+	m.Get("/blog", blogHandler)
+	m.Get("/pics", picsHandler)
 
-    log.Println("Server is running...")
-    log.Println(http.ListenAndServe("0.0.0.0:4000", m))
+	log.Println("Server is running...")
+	log.Println(http.ListenAndServe("0.0.0.0:4000", m))
 }
 
 func homeHandler(ctx *macaron.Context) {
-    ctx.Data["Title"] = "Alakbar"
-    ctx.HTML(http.StatusOK, "index")
+	ctx.Data["Title"] = "Alakbar"
+	ctx.HTML(http.StatusOK, "index")
 }
 
-func aboutHandler(ctx *macaron.Context) {
-    ctx.Data["Title"] = "About"
-    ctx.HTML(http.StatusOK, "about")
+func projectsHandler(ctx *macaron.Context) {
+	ctx.Data["Title"] = "Projects"
+	ctx.HTML(http.StatusOK, "projects")
+}
+
+func blogHandler(ctx *macaron.Context) {
+	ctx.Data["Title"] = "Blog"
+	ctx.HTML(http.StatusOK, "blog")
+}
+
+func picsHandler(ctx *macaron.Context) {
+	ctx.Data["Title"] = "Pictures"
+	ctx.HTML(http.StatusOK, "pics")
 }

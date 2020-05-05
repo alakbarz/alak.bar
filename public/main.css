@@ -112,7 +112,6 @@ p {
 }
 
 header {
-  text-align: center;
   grid-column-start: 2;
 }
 
@@ -120,11 +119,20 @@ header {
   display: inline;
 }
 
+.align-middle {
+  vertical-align: top;
+}
+
+#profileImg {
+  height: 50px;
+  border-radius: var(--radius);
+}
+
 .header {
   transition: var(--transition);
   padding: 0;
-  height: 150px;
-  border-radius: 100px;
+  border-radius: var(--radius);
+  height: 50px;
 }
 
 .header:hover {
@@ -132,13 +140,15 @@ header {
   color: white;
 }
 
-#title {
+#pageTitle {
   font-size: 2em;
+}
+
+#profileImg {
 }
 
 .navlink {
   transition: background-color 0.2s ease-in-out;
-
   font-size: 1.25em;
   padding: 10px 20px 10px 20px;
   border-radius: var(--radius);
@@ -179,12 +189,7 @@ footer {
 
 #aboutImg {
   float: right;
-  width: 75px;
+  width: 100px;
   border-radius: 100%;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
-}
-
-#profileImg {
-  height: 150px;
-  display: block;
 }
