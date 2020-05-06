@@ -6,34 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <link rel="stylesheet" href="/main.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&amp;display=swap" rel="stylesheet">
-  <link rel="shortcut icon" href="img/profile-round.png" />
+  <link rel="shortcut icon" href="img/profile-round-small.png" />
   <link rel="apple-touch-icon" href="img/profile.jpg" />
 </head>
 
 <body class="container">
   <header>
     <a href="/">
-      <div class="header card">
+      <div class="header {{if eq .Title "Alakbar"}}active{{end}}">
         <img class="" id="profileImg" src="img/profile.jpg">
-        <div class="inline align-middle" id="pageTitle">Alakbar</div>
+        <span id="pageTitle">Alakbar</span>
       </div>
     </a>
 
     <div class="nav card">
       <a href="/" id="main">
-        <div class="navlink"><span>main</span></div>
+        <div class="navlink {{if eq .Title "Alakbar"}}active{{end}}"><span>main</span></div>
       </a>
       <a href="projects" id="projects">
-        <div class="navlink"><span>projects</span></div>
+        <div class="navlink {{if eq .Title "Projects"}}active{{end}}"><span>projects</span></div>
       </a>
       <a href="blog" id="blog">
-        <div class="navlink"><span>blog</span></div>
+        <div class="navlink {{if eq .Title "Blog"}}active{{end}}"><span>blog</span></div>
       </a>
       <a href="pics" id="pics">
-        <div class="navlink"><span>pics</span></div>
+        <div class="navlink {{if eq .Title "Pictures"}}active{{end}}"><span>pics</span></div>
       </a>
     </div>
   </header>
-</body>
 
-</html>
+<main class="card">
