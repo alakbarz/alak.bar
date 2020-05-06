@@ -3,17 +3,18 @@
 
 <head>
   <title>{{.Title}} | Alakbar</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/main.css">
-  <link rel="shortcut icon" href="img/profile-round-small.png" />
-  <link rel="apple-touch-icon" href="img/profile.jpg" />
+  <link rel="shortcut icon" href="/img/profile-round-small.png"/>
+  <link rel="apple-touch-icon" href="/img/profile.jpg" />
+  <meta name="Description" content="Alakbar's personal website and portfolio">
 </head>
 
 <body class="container">
   <header>
     <a href="/">
       <div class="header {{if eq .Title "Alakbar"}}active{{end}}">
-        <img class="" id="profileImg" src="img/profile.jpg">
+        <img id="profileImg" src="img/profile.jpg" alt="Alakbar">
         <span id="pageTitle">Alakbar</span>
       </div>
     </a>
@@ -34,4 +35,4 @@
     </div>
   </header>
 
-<main class="card">
+  <main class="card">
