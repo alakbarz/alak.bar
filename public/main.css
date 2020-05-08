@@ -6,6 +6,48 @@
   --transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), url('/public/font/Roboto-Regular.woff2')
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Roboto Italic'), url('/font/Roboto-Italic.woff2')
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: bold;
+  font-weight: 700;
+  src: local('Roboto Bold'), url('/font/Roboto-Bold.woff2')
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Mono'), url('/font/RobotoMono-Regular.woff2')
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Roboto Mono Italic'), url('/font/RobotoMono-Italic.woff2')
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: bold;
+  font-weight: 700;
+  src: local('Roboto Mono Bold'), url('/font/RobotoMono-Bold.woff2')
+}
+
 * {
   box-sizing: border-box;
 }
@@ -75,6 +117,10 @@ p {
   div.gallery:hover {
     background-color: var(--accent) !important;
     color: black !important;
+  }
+
+  .white {
+    background-color: white !important;
   }
 }
 
@@ -234,7 +280,7 @@ footer {
 }
 
 .white {
-  background-color: #eee;
+  background-color: #aaa;
 }
 
 #aboutImg {
