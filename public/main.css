@@ -10,7 +10,7 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  src: local('Roboto'), url('/public/font/Roboto-Regular.woff2')
+  src: local('Roboto'), url('/font/Roboto-Regular.woff2')
 }
 
 @font-face {
@@ -50,6 +50,34 @@
 
 .mono {
   font-family: 'Roboto Mono', monospace, sans-serif;
+}
+
+/*Scrollbar Settings*/
+html {
+  overflow-y: scroll;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+/* ::-webkit-scrollbar-track {
+  background: ;
+} */
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--back);
+  border: solid 3px;
+  border-color: var(--top-bar);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--light);
 }
 
 * {

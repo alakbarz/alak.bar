@@ -21,7 +21,7 @@ func main() {
 }
 
 func homeHandler(ctx *macaron.Context) {
-	ctx.Data["Title"] = "Alakbar"
+	ctx.Data["Title"] = "Home"
 	ctx.HTML(http.StatusOK, "index")
 }
 
