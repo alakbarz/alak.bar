@@ -1,25 +1,31 @@
 {{template "base/header" .}}
 
-<img src="img/profile.jpg" alt="A picture of Alakbar" id="aboutImg" />
+<div class="mainCard" id="aboutCard">
+  <img src="img/profile.jpg" alt="A picture of Alakbar" id="aboutImg" />
+  
+  <p>
+    I'm a computer science student in my third year of university.
+    <br><br>
+    I take <a href="https://www.instagram.com/alak.barz/">pictures</a>. I edit <a
+      href="https://www.youtube.com/channel/UCLJHVfPzheLVnbz6QtyxoRA?view_as=subscriber">videos</a>. I <a
+      href="https://www.github.com/alakbarz">code</a>... or at least I try to anyway.
+    <br><br>
+    I like being creative and making stuff.
+  </p>
+</div>
 
-<p>
-  I'm a computer science student in my third year of university.
-  <br><br>
-  I take <a href="https://www.instagram.com/alak.barz/">pictures</a>. I edit <a
-    href="https://www.youtube.com/channel/UCLJHVfPzheLVnbz6QtyxoRA?view_as=subscriber">videos</a>. I <a
-    href="https://www.github.com/alakbarz">code</a>... or at least I try to anyway.
-  <br><br>
-  I like being creative and making stuff.
-</p>
+<div class="mainCard">
+  <h2 class="topHeader">Contact Information</h2>
+  <p>
+    Email: me<span style="display:none;"> and i </span>@alak.<span style="display:none;"> oop </span>bar
+    <br>
+    Twitter: <a href="https://twitter.com/_alakbar_" target="_blank">@_alakbar_</a>
+  </p>
+</div>
 
-<h2>Contact Information</h2>
-<p>
-  Email: me<span style="display:none;"> and i </span>@alak.<span style="display:none;"> oop </span>bar
-  <br>
-  Twitter: <a href="https://twitter.com/_alakbar_" target="_blank">@_alakbar_</a>
-</p>
-
-<h2>Current Projects</h2>
-<p>This website is a collection of things that I have made, want to talk about, and just explore.</p>
+<div class="mainCard">
+  <h2 class="topHeader">Current Projects</h2>
+  <p>This website is a collection of things that I have made, want to talk about, and just explore.</p>
+</div>
 
 {{template "base/footer" .}}

@@ -120,12 +120,21 @@ p {
   margin: 0;
 }
 
+.topHeader {
+  margin-top: 0;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #202020;
   }
 
   .card {
+    background-color: var(--arsenic) !important;
+    color: white !important;
+  }
+
+  .mainCard {
     background-color: var(--arsenic) !important;
     color: white !important;
   }
@@ -213,6 +222,19 @@ p {
   color: black;
 }
 
+.mainCard {
+  margin: 10px 10px 0 10px;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  background-color: white;
+  color: black;
+  padding: 20px;
+}
+
+.mainCard#aboutCard {
+  min-height: 170px;
+}
+
 .active {
   background-color: var(--accent);
   color: white !important;
@@ -270,7 +292,6 @@ header {
 
 main {
   flex: 1;
-  padding: 20px;
   grid-column: span 3;
   color: white;
 }
