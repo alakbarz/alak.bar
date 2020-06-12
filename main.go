@@ -15,6 +15,7 @@ func main() {
 	m.Get("/projects", projectsHandler)
 	m.Get("/blog", blogHandler)
 	m.Get("/pics", picsHandler)
+	m.Get("/report", reportHandler)
 
 	log.Println("Server is running...")
 	log.Println(http.ListenAndServe("0.0.0.0:4000", m))
@@ -38,4 +39,9 @@ func blogHandler(ctx *macaron.Context) {
 func picsHandler(ctx *macaron.Context) {
 	ctx.Data["Title"] = "Pictures"
 	ctx.HTML(http.StatusOK, "pics")
+}
+
+func reportHandler(ctx *macaron.Context) {
+	ctx.Data["Title"] = "Report Issue"
+	ctx.HTML(http.StatusOK, "report")
 }

@@ -1,0 +1,43 @@
+{{template "base/header" .}}
+
+<div class="mainCard">
+  <h1 class="topHeader">Report An Issue</h1>
+  <p>Consider filing a report if:
+  <ul>
+    <li>you've found a bug, broken hyperlink, or functional issues</li>
+    <li>you spot an accessibility issue (e.g. difficult to read text)</li>
+    <li>you have a suggestion</li>
+  </ul>
+  All reports are anonymous and no identifiable information is recorded.
+  </p>
+</div>
+
+<div class="mainCard">
+  <form action="">
+    <label for="issue">
+      <h3 class="topHeader">Category</h3>
+    </label>
+    <select name="country">
+      <option value="" selected disabled hidden>Choose a category</option>
+      <option value="accessibility">Accessibility</option>
+      <option value="bug">Bug</option>
+      <option value="design">Design</option>
+      <option value="other">Other</option>
+      <option value="usability">Usability</option>
+    </select>
+    <label for="email">
+      <h3 class="topHeader">Your Email (optional)</h3>
+    </label>
+    <input type="text" id="email" name="email" placeholder="example@alak.bar">
+
+    <label for="subject">
+      <h3 class="topHeader">Description</h3>
+    </label>
+    <textarea id="subject" name="subject" placeholder="Include as many details as required"
+      style="height:200px"></textarea>
+
+    <input type="submit" class="button buttonHighlight" value="SUBMIT">
+  </form>
+</div>
+
+{{template "base/footer" .}}

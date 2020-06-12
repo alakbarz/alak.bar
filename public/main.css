@@ -4,7 +4,7 @@
   --arsenic: #35363a;
   --accent: #f50057;
   --radius: 25px;
-  --transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  --transition: background-color 0.2s ease-in-out;
 }
 
 @font-face {
@@ -66,6 +66,7 @@ html {
 /* Track */
 ::-webkit-scrollbar-track {
   background: var(--light);
+  border-radius: var(--radius);
 }
 
 /* Handle */
@@ -103,6 +104,7 @@ a {
 
 h1,
 h2,
+h3,
 #title,
 .navlink {
   font-family: 'Roboto Mono', monospace, sans-serif;
@@ -118,6 +120,10 @@ p {
   font-family: 'Roboto', sans-serif;
   font-size: large;
   margin: 0;
+}
+
+ul {
+  margin-top: 5px;
 }
 
 .topHeader {
@@ -164,6 +170,11 @@ p {
 
   .white {
     background-color: white !important;
+  }
+
+  input[type=text], select, textarea {
+    background-color: #555 !important;
+    color: #fff;
   }
 }
 
@@ -405,4 +416,55 @@ div.desc {
   content: "";
   display: table;
   clear: both;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  font-family: 'Roboto Mono', monospace, sans-serif;
+  font-size: large;
+  width: 100%; /* Full width */
+  padding: 10px 20px 10px 20px;
+  background-color: #ddd;
+  border: none;
+  border-radius: var(--radius); /* Rounded borders */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+.button {
+  transition: background-color 0.3s ease-in-out;
+  font-family: 'Roboto Mono', monospace, sans-serif;
+  font-weight: bold;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.25em;
+  padding: 5px 20px 5px 20px;
+  border: 3px solid var(--accent);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.button:hover {
+  color: #fff;
+  background-color: var(--accent);
+}
+
+.buttonHighlight {
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  color: #fff !important;
+  background-color: var(--accent);
+}
+
+.buttonHighlight:hover {
+  background-color: #000;
+  border-color: #000;
+}
+
+select {
+  background-color: #ddd;
+}
+
+textarea {
+  padding: 20px;
 }
