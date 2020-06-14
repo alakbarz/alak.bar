@@ -3,9 +3,18 @@ package main
 import (
 	"log"
 	"net/http"
+	"net/smtp"
+	"os"
 
+	"github.com/go-macaron/binding"
 	"gopkg.in/macaron.v1"
 )
+
+type reportForm struct {
+	Category    string `form:"category" binding:"Required"`
+	Email       string `form:"email"`
+	Description string `form:"description" binding:"Required"`
+}
 
 func main() {
 	m := macaron.Classic()
@@ -16,6 +25,10 @@ func main() {
 	m.Get("/blog", blogHandler)
 	m.Get("/pics", picsHandler)
 	m.Get("/report", reportHandler)
+	m.Get("/thankyou", thankyouHandler)
+	m.Get("/reporterror", reporterrorHandler)
+
+	m.Post("/report", binding.Bind(reportForm{}), reportHandlerPOST)
 
 	log.Println("Server is running...")
 	log.Println(http.ListenAndServe("0.0.0.0:4000", m))
@@ -44,4 +57,42 @@ func picsHandler(ctx *macaron.Context) {
 func reportHandler(ctx *macaron.Context) {
 	ctx.Data["Title"] = "Report Issue"
 	ctx.HTML(http.StatusOK, "report")
+}
+
+func thankyouHandler(ctx *macaron.Context) {
+	ctx.Data["Title"] = "Thank You"
+	ctx.HTML(http.StatusOK, "thankyou")
+}
+
+func reporterrorHandler(ctx *macaron.Context) {
+	ctx.Data["Title"] = "Report Error"
+	ctx.HTML(http.StatusOK, "reporterror")
+}
+
+func reportHandlerPOST(ctx *macaron.Context, form reportForm) {
+	form.Category = ctx.Query("category")
+	form.Email = ctx.Query("email")
+	form.Description = ctx.Query("description")
+
+	if form.Email == "" {
+		form.Email = "[NO EMAIL PROVIDED]"
+	}
+
+	form.Description = "Category: " + form.Category + "\n" + "Email: " + form.Email + "\n" + "Description: " + form.Description
+
+	from := "me@alak.bar"
+	pass := os.Getenv("GPSSWRD")
+	to := "me@alak.bar"
+	msg := "From: " + from + "\n" + "To: " + to + "\n" + "Subject: Website Report: " + form.Category + "\n\n" + form.Description
+
+	err := smtp.SendMail("smtp.gmail.com:587", smtp.PlainAuth("", from, pass, "smtp.gmail.com"), from, []string{to}, []byte(msg))
+
+	if err != nil {
+		log.Printf("smtp error: %s", err)
+		ctx.Redirect("/reporterror")
+		return
+	} else {
+		log.Print("Report email sent")
+		ctx.Redirect("/thankyou")
+	}
 }

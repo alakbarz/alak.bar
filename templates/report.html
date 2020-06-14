@@ -13,28 +13,35 @@
 </div>
 
 <div class="mainCard">
-  <form action="">
+  <form action="" method="POST">
+
+    <!-- CATEGORY FOR REPORT -->
     <label for="issue">
       <h3 class="topHeader">Category</h3>
     </label>
-    <select name="country">
+    <select name="category" oninvalid="this.setCustomValidity('You must categorise the issue that you have discovered')"
+      oninput="this.setCustomValidity('')" required>
       <option value="" selected disabled hidden>Choose a category</option>
-      <option value="accessibility">Accessibility</option>
-      <option value="bug">Bug</option>
-      <option value="design">Design</option>
-      <option value="other">Other</option>
-      <option value="usability">Usability</option>
+      <option value="Accessibility">Accessibility</option>
+      <option value="Bug">Bug</option>
+      <option value="Design">Design</option>
+      <option value="Other">Other</option>
+      <option value="Usability">Usability</option>
     </select>
+
+    <!-- EMAIL FOR REPLY -->
     <label for="email">
       <h3 class="topHeader">Your Email (optional)</h3>
     </label>
-    <input type="text" id="email" name="email" placeholder="example@alak.bar">
+    <input type="email" name="email" placeholder="example@alak.bar">
 
+    <!-- DESCRIPTION OF REPORT -->
     <label for="subject">
       <h3 class="topHeader">Description</h3>
     </label>
-    <textarea id="subject" name="subject" placeholder="Include as many details as required"
-      style="height:200px"></textarea>
+    <textarea id="subject" name="description" placeholder="Include as many details as required" style="height:200px"
+      oninvalid="this.setCustomValidity('A description of the issue is required')" oninput="this.setCustomValidity('')"
+      required></textarea>
 
     <input type="submit" class="button buttonHighlight" value="SUBMIT">
   </form>
