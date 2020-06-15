@@ -4,7 +4,7 @@
   --arsenic: #35363a;
   --accent: #f50057;
   --radius: 25px;
-  --transition: background-color 0.2s ease-in-out;
+  --transition: background-color 0.2s ease;
 }
 
 @font-face {
@@ -281,7 +281,7 @@ header {
 }
 
 .navlink {
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease;
   font-size: 1.25em;
   padding: 10px 20px 10px 20px;
   border-radius: var(--radius);
@@ -329,7 +329,7 @@ footer {
 }
 
 .palette {
-  transition: width 0.2s ease-in-out;
+  transition: width 0.2s ease;
   width: 100px;
   height: 5px;
   display: inline-block;
@@ -358,7 +358,7 @@ footer {
 /* Gallery */
 
 div.gallery {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
   border-radius: var(--radius);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
   padding: 0 0 10px 0;
@@ -373,11 +373,11 @@ div.gallery:hover {
 }
 
 div.gallery > img {
-  transition: border-radius 0.3s ease-in-out;
+  transition: border-radius 0.3s ease;
 }
 
 div.gallery:hover > img {
-  transition: border-radius 0.3s ease-in-out;
+  transition: border-radius 0.3s ease;
   border-radius: 15px;
 }
 
@@ -433,7 +433,7 @@ input[type=email], select, textarea {
 }
 
 .button {
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease;
   font-family: 'Roboto Mono', monospace, sans-serif;
   font-weight: bold;
   background-color: transparent;
@@ -451,7 +451,7 @@ input[type=email], select, textarea {
 }
 
 .buttonHighlight {
-  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
   color: #fff !important;
   background-color: var(--accent);
 }
@@ -461,10 +461,43 @@ input[type=email], select, textarea {
   border-color: #000;
 }
 
+.noPadding {
+  padding: 0;
+}
+
 select {
   background-color: #ddd;
 }
 
 textarea {
   padding: 20px;
+}
+
+.creditsCard {
+  height: 20vh;
+}
+
+.creditsImage {
+  border-radius: var(--radius) 0 0 var(--radius);
+  height: 20vh;
+}
+
+table, tr, td {
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+  /* border: solid 1px #000; */
+}
+
+table {
+  width: 100%;
+}
+
+.creditsTableImage {
+  width: 15vh;
+}
+
+.creditsTableDescription {
+  vertical-align: top;
+  padding: 1.5vh;
 }

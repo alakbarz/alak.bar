@@ -14,8 +14,8 @@
 
 <div class="mainCard">
   <form action="" method="POST">
+    <input type="hidden" name="_csrf" value="{{.csrf_token}}">
 
-    <!-- CATEGORY FOR REPORT -->
     <label for="issue">
       <h3 class="topHeader">Category</h3>
     </label>
@@ -29,13 +29,11 @@
       <option value="Usability">Usability</option>
     </select>
 
-    <!-- EMAIL FOR REPLY -->
     <label for="email">
       <h3 class="topHeader">Your Email (optional)</h3>
     </label>
     <input type="email" name="email" placeholder="example@alak.bar">
 
-    <!-- DESCRIPTION OF REPORT -->
     <label for="subject">
       <h3 class="topHeader">Description</h3>
     </label>
