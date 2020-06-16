@@ -172,7 +172,7 @@ ul {
     background-color: white !important;
   }
 
-  input[type=email], select, textarea {
+  input[type=text], input[type=email], select, textarea {
     background-color: #555 !important;
     color: #fff;
   }
@@ -419,7 +419,7 @@ div.desc {
 }
 
 /* Style inputs with type="text", select elements and textareas */
-input[type=email], select, textarea {
+input[type=text], input[type=email], select, textarea {
   font-family: 'Roboto Mono', monospace, sans-serif;
   font-size: 1em;
   width: 100%; /* Full width */

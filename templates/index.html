@@ -17,18 +17,36 @@
 </div>
 
 <div class="mainCard">
+  <h2 class="topHeader">Current Projects</h2>
+  <p>This website is a collection of things that I have made, want to talk about, and just explore.</p>
+</div>
+
+<div class="mainCard">
   <h2 class="topHeader">Contact Information</h2>
 
   <p>
     Email: me<span style="display:none;"> and i </span>@alak.<span style="display:none;"> oop </span>bar
     <br>
-    Twitter: <a href="https://twitter.com/_alakbar_" target="_blank">@_alakbar_</a>
+    Twitter: <a href="https://twitter.com/_alakbar_" target="_blank">@_alakbar_</a> (least preferred method of comms)
   </p>
-</div>
+  <br>
+  <form action="" method="POST">
+    <input type="hidden" name="_csrf" value="{{.csrf_token}}">
 
-<div class="mainCard">
-  <h2 class="topHeader">Current Projects</h2>
-  <p>This website is a collection of things that I have made, want to talk about, and just explore.</p>
+    <label for="email">
+      <h3 class="topHeader">Your Name or Email (optional)</h3>
+    </label>
+    <input type="text" name="name" placeholder="Your name or email here">
+
+    <label for="subject">
+      <h3 class="topHeader">Description</h3>
+    </label>
+    <textarea id="subject" name="description" placeholder="Include as many details as required" style="height:200px"
+      oninvalid="this.setCustomValidity('Text is required before submitting')" oninput="this.setCustomValidity('')"
+      required></textarea>
+
+    <input type="submit" class="button buttonHighlight" value="SUBMIT">
+  </form>
 </div>
 
 {{template "base/footer" .}}

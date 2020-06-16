@@ -18,6 +18,11 @@ type reportForm struct {
 	Description string `form:"description" binding:"Required"`
 }
 
+type contactForm struct {
+	Name        string `form:"name"`
+	Description string `form:"description" binding:"Required"`
+}
+
 func main() {
 	m := macaron.Classic()
 	m.Use(macaron.Renderer())
@@ -25,22 +30,36 @@ func main() {
 	m.Use(csrf.Csrfer())
 
 	m.Get("/", homeHandler)
+	m.Post("/", csrf.Validate, binding.Bind(contactForm{}), homeHandlerPOST)
 	m.Get("/projects", projectsHandler)
 	m.Get("/blog", blogHandler)
 	m.Get("/pics", picsHandler)
 	m.Get("/report", reportHandler)
 	m.Post("/report", csrf.Validate, binding.Bind(reportForm{}), reportHandlerPOST)
 	m.Get("/thankyou", thankyouHandler)
-	m.Get("/reporterror", reporterrorHandler)
+	m.Get("/emailerror", emailerrorHandler)
 	m.Get("/credits", creditsHandler)
 
 	log.Println("Server is running...")
 	log.Println(http.ListenAndServe("0.0.0.0:4000", m))
 }
 
-func homeHandler(ctx *macaron.Context) {
+func homeHandler(ctx *macaron.Context, x csrf.CSRF) {
 	ctx.Data["Title"] = "Home"
+	ctx.Data["csrf_token"] = x.GetToken()
 	ctx.HTML(http.StatusOK, "index")
+}
+
+func homeHandlerPOST(ctx *macaron.Context, form contactForm) {
+	form.Name = ctx.Query("email")
+	form.Description = ctx.Query("description")
+
+	if form.Name == "" {
+		form.Name = "[NO NAME PROVIDED]"
+	}
+
+	form.Description = "Message From: " + form.Name + "\n\n" + "Description: " + form.Description
+	sendMail("Message From: "+form.Name, form.Description, ctx)
 }
 
 func projectsHandler(ctx *macaron.Context) {
@@ -69,13 +88,13 @@ func thankyouHandler(ctx *macaron.Context) {
 	ctx.HTML(http.StatusOK, "thankyou")
 }
 
-func reporterrorHandler(ctx *macaron.Context) {
+func emailerrorHandler(ctx *macaron.Context) {
 	ctx.Data["Title"] = "Report Error"
-	ctx.HTML(http.StatusOK, "reporterror")
+	ctx.HTML(http.StatusOK, "emailerror")
 }
 
 func reportHandlerPOST(ctx *macaron.Context, form reportForm) {
-	form.Category = ctx.Query("category")
+	form.Category = "Website Report: " + ctx.Query("category")
 	form.Email = ctx.Query("email")
 	form.Description = ctx.Query("description")
 
@@ -83,26 +102,29 @@ func reportHandlerPOST(ctx *macaron.Context, form reportForm) {
 		form.Email = "[NO EMAIL PROVIDED]"
 	}
 
-	form.Description = "Category: " + form.Category + "\n" + "Email: " + form.Email + "\n" + "Description: " + form.Description
-
-	from := "me@alak.bar"
-	pass := os.Getenv("GPSSWRD")
-	to := "me@alak.bar"
-	msg := "From: " + from + "\n" + "To: " + to + "\n" + "Subject: Website Report: " + form.Category + "\n\n" + form.Description
-
-	err := smtp.SendMail("smtp.gmail.com:587", smtp.PlainAuth("", from, pass, "smtp.gmail.com"), from, []string{to}, []byte(msg))
-
-	if err != nil {
-		log.Printf("smtp error: %s", err)
-		ctx.Redirect("/reporterror")
-		return
-	} else {
-		log.Print("Report email sent")
-		ctx.Redirect("/thankyou")
-	}
+	form.Description = "Category: " + form.Category + "\n\n" + "Email: " + form.Email + "\n\n" + "Description: " + form.Description
+	sendMail(form.Category, form.Description, ctx)
 }
 
 func creditsHandler(ctx *macaron.Context) {
 	ctx.Data["Title"] = "Credits"
 	ctx.HTML(http.StatusOK, "credits")
+}
+
+func sendMail(subject, message string, ctx *macaron.Context) {
+	from := "me@alak.bar"
+	pass := os.Getenv("GPSSWRD")
+	to := "me@alak.bar"
+	msg := "From: " + from + "\n" + "To: " + to + "\n" + "Subject: " + subject + "\n\n" + message
+
+	err := smtp.SendMail("smtp.gmail.com:587", smtp.PlainAuth("", from, pass, "smtp.gmail.com"), from, []string{to}, []byte(msg))
+
+	if err != nil {
+		log.Printf("[Gmail] SMTP ERR: %s", err)
+		ctx.Redirect("/emailerror")
+		return
+	} else {
+		log.Print("[Gmail] Email sent")
+		ctx.Redirect("/thankyou")
+	}
 }
