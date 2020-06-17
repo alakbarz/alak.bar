@@ -19,7 +19,7 @@
     <label for="issue">
       <h3 class="topHeader">Category</h3>
     </label>
-    <select name="category" oninvalid="this.setCustomValidity('You must categorise the issue that you have discovered')"
+    <select id="issue" name="category" oninvalid="this.setCustomValidity('You must categorise the issue that you have discovered')"
       oninput="this.setCustomValidity('')" required>
       <option value="" selected disabled hidden>Choose a category</option>
       <option value="Accessibility">Accessibility</option>
@@ -32,7 +32,7 @@
     <label for="email">
       <h3 class="topHeader">Your Email (optional)</h3>
     </label>
-    <input type="email" name="email" placeholder="Only if you want a response">
+    <input id="email" type="email" name="email" placeholder="Only if you want a response">
 
     <label for="subject">
       <h3 class="topHeader">Description</h3>

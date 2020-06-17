@@ -6,11 +6,11 @@
   <p>
     I'm a computer science student in my third year of university.
     <br><br>
-    I take <a href="https://www.instagram.com/alak.barz/">pictures</a>.
+    I take <a href="https://www.instagram.com/alak.barz/" target="_blank" rel="noreferrer">pictures</a>.
     <br>
-    I edit <a href="https://www.youtube.com/channel/UCLJHVfPzheLVnbz6QtyxoRA?view_as=subscriber">videos</a>.
+    I edit <a href="https://www.youtube.com/channel/UCLJHVfPzheLVnbz6QtyxoRA?view_as=subscriber" target="_blank" rel="noreferrer">videos</a>.
     <br>
-    I <a href="https://www.github.com/alakbarz">code</a>... or at least I try to anyway.
+    I <a href="https://www.github.com/alakbarz" target="_blank" rel="noreferrer">code</a>... or at least I try to anyway.
     <br><br>
     I like being creative and making stuff.
   </p>
@@ -27,21 +27,21 @@
   <p>
     Email: me<span style="display:none;"> and i </span>@alak.<span style="display:none;"> oop </span>bar
     <br>
-    Twitter: <a href="https://twitter.com/_alakbar_" target="_blank">@_alakbar_</a> (least preferred method of comms)
+    Twitter: <a href="https://twitter.com/_alakbar_" target="_blank" rel="noreferrer">@_alakbar_</a> (least preferred method of comms)
   </p>
   <br>
   <form action="" method="POST">
     <input type="hidden" name="_csrf" value="{{.csrf_token}}">
 
-    <label for="email">
+    <label for="name">
       <h3 class="topHeader">Your Name or Email (optional)</h3>
     </label>
-    <input type="text" name="name" placeholder="Your name or email here">
+    <input id="name" type="text" name="name" placeholder="Your name or email here">
 
     <label for="subject">
       <h3 class="topHeader">Description</h3>
     </label>
-    <textarea id="subject" name="description" placeholder="Include as many details as required" style="height:200px"
+    <textarea id="subject" name="description" placeholder="Your message here" style="height:200px"
       oninvalid="this.setCustomValidity('Text is required before submitting')" oninput="this.setCustomValidity('')"
       required></textarea>
 
