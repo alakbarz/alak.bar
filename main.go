@@ -39,6 +39,8 @@ func main() {
 	m.Get("/thankyou", thankyouHandler)
 	m.Get("/emailerror", emailerrorHandler)
 	m.Get("/credits", creditsHandler)
+	m.Get("/links", linksHandler)
+	m.Get("/traffic", trafficHandler)
 
 	log.Println("Server is running...")
 	log.Println(http.ListenAndServe("0.0.0.0:4000", m))
@@ -83,16 +85,6 @@ func reportHandler(ctx *macaron.Context, x csrf.CSRF) {
 	ctx.HTML(http.StatusOK, "report")
 }
 
-func thankyouHandler(ctx *macaron.Context) {
-	ctx.Data["Title"] = "Thank You"
-	ctx.HTML(http.StatusOK, "thankyou")
-}
-
-func emailerrorHandler(ctx *macaron.Context) {
-	ctx.Data["Title"] = "Report Error"
-	ctx.HTML(http.StatusOK, "emailerror")
-}
-
 func reportHandlerPOST(ctx *macaron.Context, form reportForm) {
 	form.Category = "Website Report: " + ctx.Query("category")
 	form.Email = ctx.Query("email")
@@ -106,9 +98,29 @@ func reportHandlerPOST(ctx *macaron.Context, form reportForm) {
 	sendMail(form.Category, form.Description, ctx)
 }
 
+func thankyouHandler(ctx *macaron.Context) {
+	ctx.Data["Title"] = "Thank You"
+	ctx.HTML(http.StatusOK, "thankyou")
+}
+
+func emailerrorHandler(ctx *macaron.Context) {
+	ctx.Data["Title"] = "Report Error"
+	ctx.HTML(http.StatusOK, "emailerror")
+}
+
 func creditsHandler(ctx *macaron.Context) {
 	ctx.Data["Title"] = "Credits"
 	ctx.HTML(http.StatusOK, "credits")
+}
+
+func linksHandler(ctx *macaron.Context) {
+	ctx.Data["Title"] = "Links"
+	ctx.HTML(http.StatusOK, "links")
+}
+
+func trafficHandler(ctx *macaron.Context) {
+	ctx.Data["Title"] = "Traffic"
+	ctx.HTML(http.StatusOK, "traffic")
 }
 
 func sendMail(subject, message string, ctx *macaron.Context) {
@@ -123,8 +135,8 @@ func sendMail(subject, message string, ctx *macaron.Context) {
 		log.Printf("[Gmail] SMTP ERR: %s", err)
 		ctx.Redirect("/emailerror")
 		return
-	} else {
-		log.Print("[Gmail] Email sent")
-		ctx.Redirect("/thankyou")
 	}
+
+	log.Print("[Gmail] Email sent")
+	ctx.Redirect("/thankyou")
 }

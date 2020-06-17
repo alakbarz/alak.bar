@@ -467,8 +467,8 @@ input[type=text], input[type=email], select, textarea {
   border-color: #000;
 }
 
-.noPadding {
-  padding: 0;
+.imageCard {
+  padding: 0 10px 0 0;
 }
 
 select {
@@ -479,13 +479,32 @@ textarea {
   padding: 20px;
 }
 
-.creditsCard {
-  height: 20vh;
+@media only screen and (max-width: 375px) {
+  td > h2 {
+    font-size: 1em;
+  }
+
+  .linksLink {
+    font-size: 1em !important;
+  }
+
+  td > p {
+    font-size: 0.9em !important;
+  }
 }
 
-.creditsImage {
-  border-radius: var(--radius) 0 0 var(--radius);
-  height: 20vh;
+@media only screen and (min-width: 800px) {
+  .linksImage {
+    width: 100% !important;
+  }
+  
+  .linksTableImage {
+    width: 25% !important;
+  }
+
+  .linksLink {
+    font-size: 2em !important;
+  }
 }
 
 table, tr, td {
@@ -499,11 +518,17 @@ table {
   width: 100%;
 }
 
-.creditsTableImage {
-  width: 15vh;
+.linksImage {
+  width: 100%;
+  border-radius: var(--radius) 0 0 var(--radius);
+  display: block;
+  padding-right: 15px;
 }
 
-.creditsTableDescription {
-  vertical-align: top;
-  padding: 1.5vh;
+.linksTableImage {
+  width: 40%;
+}
+
+.linksLink {
+  font-size: 1.25em;
 }
