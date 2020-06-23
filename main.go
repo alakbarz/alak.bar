@@ -1,10 +1,13 @@
 package main
 
 import (
+	"fmt"
+	"io/ioutil"
 	"log"
 	"net/http"
 	"net/smtp"
 	"os"
+	"regexp"
 
 	"github.com/go-macaron/binding"
 	"github.com/go-macaron/csrf"
@@ -50,6 +53,7 @@ func homeHandler(ctx *macaron.Context, x csrf.CSRF) {
 	ctx.Data["Title"] = "Home"
 	ctx.Data["csrf_token"] = x.GetToken()
 	ctx.HTML(http.StatusOK, "index")
+	getDescription()
 }
 
 func homeHandlerPOST(ctx *macaron.Context, form contactForm) {
@@ -140,3 +144,58 @@ func sendMail(subject, message string, ctx *macaron.Context) {
 	log.Print("[Gmail] Email sent")
 	ctx.Redirect("/thankyou")
 }
+
+func getDescription() {
+	// Make HTTP request
+	response, err := http.Get("https://www.humaidq.ae")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer response.Body.Close()
+
+	// Read response data in to memory
+	body, err := ioutil.ReadAll(response.Body)
+	if err != nil {
+		log.Fatal("Error reading HTTP body. ", err)
+	}
+
+	// <meta name="description" content="An Emirati who likes writing open-source software." />
+
+	// Create a regular expression to find comments
+	re := regexp.MustCompile("content=")
+	comments := re.FindAllString(string(body), -1)
+	if comments == nil {
+		fmt.Println("No matches.")
+	} else {
+		for _, comment := range comments {
+			fmt.Println(comment)
+		}
+	}
+}
+
+// func getDescription() {
+// 	// Make HTTP request
+// 	response, err := http.Get("https://www.humaidq.ae")
+// 	if err != nil {
+// 		log.Fatal(err)
+// 	}
+// 	defer response.Body.Close()
+
+// 	// Create a goquery document from the HTTP response
+// 	document, err := goquery.NewDocumentFromReader(response.Body)
+// 	if err != nil {
+// 		log.Fatal("Error loading HTTP response body. ", err)
+// 	}
+
+// 	// Find all links and process them with the function
+// 	// defined earlier
+// 	document.Find("meta").Each(processElement)
+// }
+
+// func processElement(index int, element *goquery.Selection) {
+// 	// See if the href attribute exists on the element
+// 	desc, exists := element.Attr("content")
+// 	if exists {
+// 		fmt.Println(desc)
+// 	}
+// }
