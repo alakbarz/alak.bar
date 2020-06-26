@@ -1,17 +1,18 @@
 package main
 
 import (
-	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
 	"net/smtp"
 	"os"
-	"regexp"
+	"time"
 
 	"github.com/go-macaron/binding"
 	"github.com/go-macaron/csrf"
 	"github.com/go-macaron/session"
+	"github.com/gomarkdown/markdown"
+	"golang.org/x/net/html"
 	"gopkg.in/macaron.v1"
 )
 
@@ -35,15 +36,18 @@ func main() {
 	m.Get("/", homeHandler)
 	m.Post("/", csrf.Validate, binding.Bind(contactForm{}), homeHandlerPOST)
 	m.Get("/projects", projectsHandler)
+	m.Get("/projects/:name", projectsFileHandler)
 	m.Get("/blog", blogHandler)
 	m.Get("/pics", picsHandler)
 	m.Get("/report", reportHandler)
-	m.Post("/report", csrf.Validate, binding.Bind(reportForm{}), reportHandlerPOST)
 	m.Get("/thankyou", thankyouHandler)
 	m.Get("/emailerror", emailerrorHandler)
 	m.Get("/credits", creditsHandler)
 	m.Get("/links", linksHandler)
 	m.Get("/traffic", trafficHandler)
+	m.Get("/alakbot", alakbotHandler)
+
+	m.Post("/report", csrf.Validate, binding.Bind(reportForm{}), reportHandlerPOST)
 
 	log.Println("Server is running...")
 	log.Println(http.ListenAndServe("0.0.0.0:4000", m))
@@ -53,7 +57,7 @@ func homeHandler(ctx *macaron.Context, x csrf.CSRF) {
 	ctx.Data["Title"] = "Home"
 	ctx.Data["csrf_token"] = x.GetToken()
 	ctx.HTML(http.StatusOK, "index")
-	getDescription()
+	// markdownToHTML()
 }
 
 func homeHandlerPOST(ctx *macaron.Context, form contactForm) {
@@ -71,6 +75,10 @@ func homeHandlerPOST(ctx *macaron.Context, form contactForm) {
 func projectsHandler(ctx *macaron.Context) {
 	ctx.Data["Title"] = "Projects"
 	ctx.HTML(http.StatusOK, "projects")
+}
+
+func projectsFileHandler(ctx *macaron.Context) {
+
 }
 
 func blogHandler(ctx *macaron.Context) {
@@ -119,12 +127,18 @@ func creditsHandler(ctx *macaron.Context) {
 
 func linksHandler(ctx *macaron.Context) {
 	ctx.Data["Title"] = "Links"
+	ctx.Data["HumaidDesc"] = getDescription("https://www.humaidq.ae")
 	ctx.HTML(http.StatusOK, "links")
 }
 
 func trafficHandler(ctx *macaron.Context) {
 	ctx.Data["Title"] = "Traffic"
 	ctx.HTML(http.StatusOK, "traffic")
+}
+
+func alakbotHandler(ctx *macaron.Context) {
+	ctx.Data["Title"] = "Alakbot"
+	ctx.HTML(http.StatusOK, "alakbot")
 }
 
 func sendMail(subject, message string, ctx *macaron.Context) {
@@ -145,57 +159,92 @@ func sendMail(subject, message string, ctx *macaron.Context) {
 	ctx.Redirect("/thankyou")
 }
 
-func getDescription() {
-	// Make HTTP request
-	response, err := http.Get("https://www.humaidq.ae")
+func getDescription(url string) string {
+
+	log.Println("Getting description for: " + url)
+
+	// https://www.devdungeon.com/content/web-scraping-go
+	// Create HTTP client with timeout
+	client := &http.Client{
+		Timeout: 5 * time.Second,
+	}
+
+	// Create and modify HTTP request before sending
+	request, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		log.Fatal(err)
 	}
-	defer response.Body.Close()
 
-	// Read response data in to memory
-	body, err := ioutil.ReadAll(response.Body)
+	request.Header.Set("User-Agent", "Alakbot v0.1 (+http://alak.bar/alakbot)")
+
+	// Make request
+	response, err := client.Do(request)
 	if err != nil {
-		log.Fatal("Error reading HTTP body. ", err)
+		log.Fatal(err)
 	}
 
-	// <meta name="description" content="An Emirati who likes writing open-source software." />
+	defer response.Body.Close()
 
-	// Create a regular expression to find comments
-	re := regexp.MustCompile("content=")
-	comments := re.FindAllString(string(body), -1)
-	if comments == nil {
-		fmt.Println("No matches.")
-	} else {
-		for _, comment := range comments {
-			fmt.Println(comment)
+	body := html.NewTokenizer(response.Body)
+
+	for {
+		tt := body.Next()
+		if tt == html.ErrorToken {
+			log.Println("HTML Error Token")
+			return ""
+		}
+
+		switch tt {
+		case html.ErrorToken:
+			continue
+		case html.StartTagToken, html.SelfClosingTagToken:
+			tag, has := body.TagName()
+
+			if !has || string(tag) != "meta" {
+				continue
+			} else {
+				tagStr := string(tag)
+
+				isDesc := false
+				var description string
+
+				for {
+					key, val, has := body.TagAttr()
+
+					keyStr := string(key)
+					valStr := string(val)
+
+					if tagStr == "meta" {
+						if keyStr == "name" && valStr == "description" {
+							isDesc = true
+						} else if keyStr == "content" {
+							description = valStr
+						}
+					}
+
+					if !has {
+						break
+					}
+				}
+
+				if isDesc {
+					return description
+				}
+			}
 		}
 	}
 }
 
-// func getDescription() {
-// 	// Make HTTP request
-// 	response, err := http.Get("https://www.humaidq.ae")
-// 	if err != nil {
-// 		log.Fatal(err)
-// 	}
-// 	defer response.Body.Close()
+func markdownToHTML() {
+	file := "public/projects/test.md"
 
-// 	// Create a goquery document from the HTTP response
-// 	document, err := goquery.NewDocumentFromReader(response.Body)
-// 	if err != nil {
-// 		log.Fatal("Error loading HTTP response body. ", err)
-// 	}
+	content, err := ioutil.ReadFile(file)
 
-// 	// Find all links and process them with the function
-// 	// defined earlier
-// 	document.Find("meta").Each(processElement)
-// }
+	if err != nil {
+		log.Println("Could not read file")
+	}
 
-// func processElement(index int, element *goquery.Selection) {
-// 	// See if the href attribute exists on the element
-// 	desc, exists := element.Attr("content")
-// 	if exists {
-// 		fmt.Println(desc)
-// 	}
-// }
+	html := markdown.ToHTML(content, nil, nil)
+
+	log.Print(string(html))
+}
