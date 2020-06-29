@@ -135,7 +135,7 @@ func homeHandler(ctx *macaron.Context, x csrf.CSRF) {
 }
 
 func homeHandlerPOST(ctx *macaron.Context, form contactForm) {
-	form.Name = ctx.Query("email")
+	form.Name = ctx.Query("name")
 	form.Description = ctx.Query("description")
 
 	if form.Name == "" {
@@ -153,7 +153,6 @@ func projectsHandler(ctx *macaron.Context) {
 	sort.Sort(byDate(projectsArr))
 	ctx.Data["Projects"] = projectsArr
 	ctx.HTML(http.StatusOK, "projects")
-	// ctx.Data["Name"] = template.HTML("<a>Hello</a>")
 }
 
 func projectsFileHandler(ctx *macaron.Context) {
