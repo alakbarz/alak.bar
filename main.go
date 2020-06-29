@@ -135,7 +135,7 @@ func homeHandler(ctx *macaron.Context, x csrf.CSRF) {
 }
 
 func homeHandlerPOST(ctx *macaron.Context, form contactForm) {
-	form.Name = ctx.Query("email")
+	form.Name = ctx.Query("name")
 	form.Description = ctx.Query("description")
 
 	if form.Name == "" {
