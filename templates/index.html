@@ -3,33 +3,32 @@
 <div class="mainCard" id="aboutCard">
   <img src="img/profile.jpg" alt="A picture of Alakbar" id="aboutImg" />
 
-  <p>
-    I'm a computer science student in my third year at Heriot-Watt University.
-    <br><br>
-    I take <a href="https://www.instagram.com/alak.barz/" target="_blank" rel="noreferrer">pictures</a>.
+  <p>I'm a computer science student in my third year at Heriot-Watt University.</p>
+
+  <p> I take <a href="https://www.instagram.com/alak.barz/" target="_blank" rel="noreferrer">pictures</a>.
     <br>
     I edit <a href="https://www.youtube.com/channel/UCLJHVfPzheLVnbz6QtyxoRA?view_as=subscriber" target="_blank"
       rel="noreferrer">videos</a>.
     <br>
     I <a href="https://www.github.com/alakbarz" target="_blank" rel="noreferrer">code</a>... or at least I try to
     anyway.
-    <br><br>
-    I like being creative and making stuff.
   </p>
+  
+  <p class="bottomPar">I like being creative and making stuff.</p>
 </div>
 
 <div class="mainCard">
-  <h2 class="topHeader">Current Projects</h2>
-  <p>This is a description waiting to happen.</p>
+  <h2>Current Projects</h2>
+  <p class="bottomPar">This is a description waiting to happen.</p>
 </div>
 
 <div class="mainCard" id="otherSitesCard">
-  <h2 class="topHeader"><a href="links">Other Sites</a></h2>
-  <p>Check out websites made by some of my peers.</p>
+  <h2><a href="links">Other Sites</a></h2>
+  <p class="bottomPar">Check out websites made by some of my peers.</p>
 </div>
 
 <div class="mainCard">
-  <h2 class="topHeader">Contact Information</h2>
+  <h2>Contact Information</h2>
 
   <p>
     Email: me<span style="display:none;"> and i </span>@alak.<span style="display:none;"> oop </span>bar
@@ -37,17 +36,17 @@
     Twitter: <a href="https://twitter.com/_alakbar_" target="_blank" rel="noreferrer">@_alakbar_</a> (least preferred
     method of comms)
   </p>
-  <br>
+
   <form action="" method="POST">
     <input type="hidden" name="_csrf" value="{{.csrf_token}}">
 
     <label for="name">
-      <h3 class="topHeader">Your Name or Email (optional)</h3>
+      <h3>Your Name or Email (optional)</h3>
     </label>
     <input id="name" type="text" name="name" placeholder="Your name or email here">
 
     <label for="subject">
-      <h3 class="topHeader">Description</h3>
+      <h3>Description</h3>
     </label>
     <textarea id="subject" name="description" placeholder="Your message here" style="height:200px"
       oninvalid="this.setCustomValidity('Text is required before submitting')" oninput="this.setCustomValidity('')"

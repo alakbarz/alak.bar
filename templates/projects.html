@@ -1,7 +1,11 @@
 {{template "base/header" .}}
 
+{{ range $index, $fields := .Projects }}
 <div class="mainCard">
-  <p>My projects will go here, but the blogging section is being built first.</p>
+  <p class="bottomPar subtitle">{{$fields.DateFormatted}}</p>
+  <h2 class="topHeader"><a href="/projects/{{$fields.FileName}}">{{$fields.Name}}</a></h2>
+  <p class="bottomPar">{{$fields.Description}}</p>
 </div>
+{{end}}
 
 {{template "base/footer" .}}

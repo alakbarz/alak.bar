@@ -1,17 +1,21 @@
 package main
 
 import (
+	"html/template"
 	"io/ioutil"
 	"log"
 	"net/http"
 	"net/smtp"
 	"os"
+	"sort"
+	"strings"
 	"time"
 
 	"github.com/go-macaron/binding"
 	"github.com/go-macaron/csrf"
 	"github.com/go-macaron/session"
 	"github.com/gomarkdown/markdown"
+	"github.com/metakeule/fmtdate"
 	"golang.org/x/net/html"
 	"gopkg.in/macaron.v1"
 )
@@ -26,6 +30,20 @@ type contactForm struct {
 	Name        string `form:"name"`
 	Description string `form:"description" binding:"Required"`
 }
+
+type post struct {
+	Date          time.Time
+	DateFormatted string
+	Description   string
+	FileName      string
+	HTML          string
+	Markdown      string
+	Name          string
+}
+
+var projectsArr []post
+
+type byDate []post
 
 func main() {
 	m := macaron.Classic()
@@ -49,15 +67,71 @@ func main() {
 
 	m.Post("/report", csrf.Validate, binding.Bind(reportForm{}), reportHandlerPOST)
 
+	m.NotFound(func(ctx *macaron.Context) {
+		ctx.Data["Title"] = "Not Found"
+		ctx.HTML(http.StatusNotFound, "404")
+	})
+
 	log.Println("Server is running...")
 	log.Println(http.ListenAndServe("0.0.0.0:4000", m))
+}
+
+func getPosts(directory string) {
+	files, _ := ioutil.ReadDir(directory)
+
+	for _, file := range files {
+		fileContents, _ := ioutil.ReadFile(directory + file.Name())
+		header := strings.Split(string(fileContents), "---")
+		lines := strings.Split(header[1], "\n")
+
+		var fields post
+		fields.Markdown = header[2]
+
+		html := markdown.ToHTML([]byte(header[2]), nil, nil)
+		fields.HTML = string(html)
+
+		filenameSplit := strings.Split(file.Name(), ".")
+		fields.FileName = filenameSplit[0]
+
+		for _, line := range lines {
+			pair := strings.Split(line, ": ")
+
+			if len(pair) == 2 {
+				switch pair[0] {
+				case "title":
+					fields.Name = pair[1]
+					break
+				case "description":
+					fields.Description = pair[1]
+				case "date":
+					date, _ := fmtdate.Parse("YYYY-MM-DD", pair[1])
+
+					dateFormatted := date.Format("January 2, 2006")
+					fields.Date = date
+					fields.DateFormatted = dateFormatted
+				}
+			}
+		}
+		projectsArr = append(projectsArr, fields)
+	}
+}
+
+func (d byDate) Len() int {
+	return len(d)
+}
+
+func (d byDate) Swap(i, j int) {
+	d[i], d[j] = d[j], d[i]
+}
+
+func (d byDate) Less(i, j int) bool {
+	return d[i].Date.After(d[j].Date)
 }
 
 func homeHandler(ctx *macaron.Context, x csrf.CSRF) {
 	ctx.Data["Title"] = "Home"
 	ctx.Data["csrf_token"] = x.GetToken()
 	ctx.HTML(http.StatusOK, "index")
-	// markdownToHTML()
 }
 
 func homeHandlerPOST(ctx *macaron.Context, form contactForm) {
@@ -74,11 +148,24 @@ func homeHandlerPOST(ctx *macaron.Context, form contactForm) {
 
 func projectsHandler(ctx *macaron.Context) {
 	ctx.Data["Title"] = "Projects"
+	projectsArr = nil
+	getPosts("public/projects/")
+	sort.Sort(byDate(projectsArr))
+	ctx.Data["Projects"] = projectsArr
 	ctx.HTML(http.StatusOK, "projects")
+	// ctx.Data["Name"] = template.HTML("<a>Hello</a>")
 }
 
 func projectsFileHandler(ctx *macaron.Context) {
+	name := ctx.Params("name")
 
+	for _, post := range projectsArr {
+		if post.FileName == name {
+			ctx.Data["HTML"] = template.HTML(post.HTML)
+			ctx.Data["Title"] = strings.Title(post.FileName)
+		}
+	}
+	ctx.HTML(http.StatusOK, "project")
 }
 
 func blogHandler(ctx *macaron.Context) {
@@ -233,18 +320,4 @@ func getDescription(url string) string {
 			}
 		}
 	}
-}
-
-func markdownToHTML() {
-	file := "public/projects/test.md"
-
-	content, err := ioutil.ReadFile(file)
-
-	if err != nil {
-		log.Println("Could not read file")
-	}
-
-	html := markdown.ToHTML(content, nil, nil)
-
-	log.Print(string(html))
 }
