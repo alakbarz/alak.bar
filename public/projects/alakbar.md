@@ -5,5 +5,6 @@ date: 2020-05-05
 ---
 
 # alak.bar
+*Making a website from scratch using Macaron and Golang*
 
-## Starting The Server
+You're looking at this project as we speak!
