@@ -80,6 +80,10 @@ func getPosts(directory string) {
 	files, _ := ioutil.ReadDir(directory)
 
 	for _, file := range files {
+		if file.IsDir() {
+			continue
+		}
+
 		fileContents, _ := ioutil.ReadFile(directory + file.Name())
 		header := strings.Split(string(fileContents), "---")
 		lines := strings.Split(header[1], "\n")
@@ -161,6 +165,7 @@ func projectsFileHandler(ctx *macaron.Context) {
 	for _, post := range projectsArr {
 		if post.FileName == name {
 			ctx.Data["HTML"] = template.HTML(post.HTML)
+			ctx.Data["Name"] = post.FileName
 			ctx.Data["Title"] = strings.Title(post.FileName)
 		}
 	}

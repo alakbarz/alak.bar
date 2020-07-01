@@ -4,8 +4,6 @@ description: A lightweight Lobste.rs reader built using Flutter
 date: 2020-05-10
 ---
 
-![Pincer](/img/projects/pincer/pincerFeature.png)
-
 # Pincer for Lobste.rs
 *A lightweight [Lobste.rs](https://lobste.rs/) reader*
 

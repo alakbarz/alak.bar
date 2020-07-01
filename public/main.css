@@ -126,11 +126,12 @@ h1, h2, h3 {
 
 p {
   font-family: 'Roboto', sans-serif;
-  font-size: large;
+  /* font-size: 1em; */
   margin: 0 0 20px 0;
 }
 
-ul {
+ul, li {
+  /* font-size: 1em; */
   margin-top: 5px;
 }
 
