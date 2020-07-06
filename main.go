@@ -42,6 +42,7 @@ type post struct {
 }
 
 var projectsArr []post
+var blogsArr []post
 
 type byDate []post
 
@@ -56,6 +57,7 @@ func main() {
 	m.Get("/projects", projectsHandler)
 	m.Get("/projects/:name", projectsFileHandler)
 	m.Get("/blog", blogHandler)
+	m.Get("/blog/:name", blogFileHandler)
 	m.Get("/pics", picsHandler)
 	m.Get("/report", reportHandler)
 	m.Get("/thankyou", thankyouHandler)
@@ -116,7 +118,14 @@ func getPosts(directory string) {
 				}
 			}
 		}
-		projectsArr = append(projectsArr, fields)
+
+		switch directory {
+		case "public/projects/":
+			projectsArr = append(projectsArr, fields)
+			break
+		case "public/blog/":
+			blogsArr = append(blogsArr, fields)
+		}
 	}
 }
 
@@ -174,7 +183,24 @@ func projectsFileHandler(ctx *macaron.Context) {
 
 func blogHandler(ctx *macaron.Context) {
 	ctx.Data["Title"] = "Blog"
+	blogsArr = nil
+	getPosts("public/blog/")
+	sort.Sort(byDate(blogsArr))
+	ctx.Data["Blog"] = blogsArr
 	ctx.HTML(http.StatusOK, "blog")
+}
+
+func blogFileHandler(ctx *macaron.Context) {
+	name := ctx.Params("name")
+
+	for _, post := range blogsArr {
+		if post.FileName == name {
+			ctx.Data["HTML"] = template.HTML(post.HTML)
+			ctx.Data["Name"] = post.FileName
+			ctx.Data["Title"] = strings.Title(post.FileName)
+		}
+	}
+	ctx.HTML(http.StatusOK, "project")
 }
 
 func picsHandler(ctx *macaron.Context) {

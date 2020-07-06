@@ -1,8 +1,8 @@
 :root {
   --background: #fff;
-  --dark : #202020;
+  --dark : #151515;
   --light: #eee;
-  --arsenic: #35363a;
+  --arsenic: #252525;
   --accent: #f50057;
   --radius: 25px;
   --transition: background-color 0.2s ease;
@@ -560,4 +560,21 @@ table {
 
 .linksLink {
   font-size: 1.25em;
+}
+
+blockquote {
+  border-left: solid 5px #f50057;
+  padding: 15px 15px 15px 15px;
+  background-color: rgba(245, 0, 87, 0.25);
+  border-radius: 0 10px 10px 0;
+}
+
+blockquote > p {
+  margin-bottom: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  blockquote {
+    background-color: rgba(245, 0, 87, 0.4);
+  }
 }
