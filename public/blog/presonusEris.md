@@ -2,6 +2,7 @@
 title: PreSonus Eris E4.5 Studio Monitors
 description: Entry level studio monitors that I have been using for over a year
 date: 2020-06-04
+updated: 2020-06-08
 tags: Review, Audio
 ---
 
@@ -9,7 +10,6 @@ tags: Review, Audio
 *Entry level studio monitors for under £150*
 
 <center>
-Front Side of Eris E4.5
 
 ![PreSonus Eris E4.5 Front](erisFront.jpg)
 
@@ -25,11 +25,9 @@ They are on the expensive side, but in terms of aesthetics, sound, features, and
 
 Some reviews state a noticeable [mains hum](https://en.wikipedia.org/wiki/Mains_hum), though from my experience it isn't too bad. I go into more detail on this later.
 
-At the time of purchase, February 2019, they were £139.
-
+It does appear that their price has increased since my purchase during February 2019 when they were £139.
 
 <center>
-Back Side of Eris E4.5
 
 ![PreSonus Eris E4.5 Front](erisBack.jpg)
 
@@ -97,7 +95,7 @@ This is most likely because I don't do professional grade work, thus I'm not loo
 ## Features
 I really like that the speakers don't require [XLR](https://en.wikipedia.org/wiki/XLR_connector) or anything fancy in order to get them working. A simple stereo audio RCA connector to 3.5mm jack from my PC to the speakers works.
 
-I can also connect my phone with a 3.5mm to 3.5mm headphone jack straight to the front of the speaker and it works as expected (it will play audio from the rear and front inputs simultaneously). Not all speakers in this class feature front audio inputs/outputs.
+I can also connect my phone with a 3.5mm to 3.5mm headphone jack straight to the front of the speaker and it works as expected (it will play audio from the rear and front inputs simultaneously). Not all speakers in this product category feature front audio inputs/outputs.
 
 I can also connect my headphones to the speakers through the front which passes the audio only to the headphones.
 
@@ -106,3 +104,24 @@ These are all features that I didn't really consider when purchasing, but have c
 ## Aesthetics
 This is a very subjective category, but in my opinion the the matte black appearance of the speakers works perfectly. There are no glossy surfaces (unlike M-Audio AV42, JBL LSR305), nor are there any bright colours (unlike KRK Rokit, Yamaha, Mackie CR4-X).
 
+## Mains Hum
+I have seen reviews online and videos of some people having issues with the amount of mains hum coming from the Eris E4.5. In my experience it is almost inaudible, especially when there is audio playing.
+
+The hum is noticeable at close distances (less than half a metre) and/or when you try and listen for it. Most of the time my mind tunes it out.
+
+I used a [spectrum analyser app](https://play.google.com/store/apps/details?id=org.intoorbit.spectrum&hl=en) on my phone and these were my results:
+
+![Mains hum](mainsHum.png)
+
+I held my phones microphone roughly 3cm away from the tweeter (the small speaker at the top), with the Eris turned on in the left screenshot and turned off in the right.
+
+As you can see in the 10kHz range there is a spike in high frequencies when the speaker is turned on. To my ears it pretty much sounds like white noise.
+
+As for the main driver, it seems to create a spike at around 149Hz (triple the ~50Hz mains frequency), though this one is even less audible than the tweeter.
+
+My verdict is that this is a non-issue for me, and perhaps it could be even less noisy if I used a balanced connector rather than the unbalanced RCA jack.
+
+## Real World Experience
+Apart from using it at home extensively, I have also taken it to a Christmas dinner and a charity event. In both cases the speakers were plenty loud with no distortion (the volume wasn't even at half if I remember correctly).
+
+I did carry them in a large bag and their weight was manageable. I wouldn't walk an hour with them, but 10 minutes down the road is alright. The fact that they are a totally contained system meant that I only required to transport 3 cables; power cable, 3.5mm to 3.5mm jack, and the wire to connect the two speakers.
