@@ -1,7 +1,7 @@
 ---
 title: PreSonus Eris E4.5 Studio Monitors
 description: Entry level studio monitors that I have been using for over a year
-date: 2020-06-04
+date: 2020-07-06
 tags: Review, Audio
 ---
 
