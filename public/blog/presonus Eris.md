@@ -7,7 +7,6 @@ tags: Review, Audio
 ---
 
 # PreSonus Eris E4.5 Studio Monitors
-*Entry level studio monitors for under £150*
 
 <center>
 
