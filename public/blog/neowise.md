@@ -8,7 +8,7 @@ tags: Photography, Astrophotography, Cameras
 
 # A Drop In The Ocean
 
-*Want to use these as desktop/mobile backgrounds? Go ahead, and if you want the original high resolution JPEG (or even RAW files) just [contact me](/#contact)*
+*Want to use these as desktop/mobile backgrounds? Go ahead, and if you want the original high resolution JPEG (or even RAW files) just [contact me](/#contact).*
 
 I was so close to packing up my tripod, capping my lens, and giving up. I had been standing on top of Craiglockhart Hill for over thirty minutes now, with a cold breeze pilfering my precious warmth from me.
 
@@ -57,7 +57,7 @@ Sure enough, there it was, higher in elevation than I was expecting, but there n
 
 I was genuinely about to pack up my things and start leaving, but that sudden blip in my peripheral vision reminded me of a (disputed) technique that some astronomers use called [averted vision](https://en.wikipedia.org/wiki/Averted_vision).
 
-> *"It involves not looking directly at the object, but looking a little off to the side, while continuing to concentrate on the object"* &dash; Wikipedia
+> *"It involves not looking directly at the object, but looking a little off to the side, while continuing to concentrate on the object"* - Wikipedia
 
 In my experience I've found it mildy useful, though it's no nightvision.
 
