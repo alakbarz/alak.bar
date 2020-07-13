@@ -110,7 +110,7 @@ The colours are exaggerated, though not as much as you might think. It truly was
 *(Venus & Aldebaran have been digitally removed)*
 </center>
 
-Being able to see Venus, the Moon, Mars, Jupiter, Saturn, *and* a comet, all topped off with a beautiful sunrise over Edinburgh's landscape... my vocabulary does not stretch far enough to find the words to describe it.
+Just in this one night, being able to see Venus, the Moon, Mars, Jupiter, Saturn, *and* a comet, all topped off with a beautiful sunrise over Edinburgh's landscape... my vocabulary does not stretch far enough to find the words to describe it.
 
 That concludes this story, however for those who are curious about photography there is a brief explanation and some tips regarding how to capture images at night time.
 
