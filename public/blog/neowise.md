@@ -8,11 +8,16 @@ tags: Photography, Astrophotography, Cameras
 
 # A Drop In The Ocean
 
-*Want to use these as desktop/mobile backgrounds? Go ahead, and if you want the original high resolution JPEG (or even RAW files) just [contact me](/#contact).*
+*Want to use these as your wallpaper? Go ahead. If you want to use them else where or if you want the original high resolution JPEG (or even RAW files) just [contact me](/#contact).*
 
 I was so close to packing up my tripod, capping my lens, and giving up. I had been standing on top of Craiglockhart Hill for over thirty minutes now, with a cold breeze pilfering my precious warmth from me.
 
-![A Drop](aDrop.jpg)
+<center>
+
+![Comet C/2020 F3 NEOWISE](aDrop.jpg)
+
+*Comet C/2020 F3 (NEOWISE)*
+</center>
 
 ## Ascension
 
@@ -96,9 +101,27 @@ I had everything packed away as I was descending the hill, but on the journey do
 *The Tower (feat. Venus & Aldebaran)*
 </center>
 
-The colours are exaggerated, though not as much as you might think. It truly was a spectacular sight watching the sun rise over Edinburgh.
+The colours are exaggerated, though not as much as you might think. It truly was a spectacular sight watching the sun rise over Edinburgh. Moreover, [Venus](https://en.wikipedia.org/wiki/Venus) and [Aldebaran](https://en.wikipedia.org/wiki/Aldebaran) decided to poke their heads out from the horizon.
+
+<center>
 
 ![The Tower Phone Wallpaper](theTowerPhoneWallpaper.jpg)
+
+*(Venus & Aldebaran have been digitally removed)*
+</center>
+
+Being able to see Venus, the Moon, Mars, Jupiter, Saturn, *and* a comet, all topped off with a beautiful sunrise over Edinburgh's landscape... my vocabulary does not stretch far enough to find the words to describe it.
+
+That concludes this story, however for those who are curious about photography there is a brief explanation and some tips regarding how to capture images at night time.
+
+Let me leave you with this final image that I am currently using as my phone wallpaper.
+
+<center>
+
+![A Drop Phone Wallpaper](aDropPhoneWallpaper.jpg)
+
+*Comet C/2020 F3 (NEOWISE)*
+</center>
 
 ## Basic Night Photography Tips
 
@@ -131,10 +154,8 @@ Let's clear some questions up first, but please note that there will be simplifi
 > Should I shoot my pictures in RAW format instead of JPEG?
 
 It depends on several factors:
- - Storage capacity
- - Free time
- - Quantity of effort you have for photo editing
- - What you're shooting
+
+> Storage capacity, free time, quantity of effort you have for photo editing, what you're shooting
 
 If you have limited drive space on your computer then you may consider not shooting in RAW, as they take up more file space* and you have to consider keeping both the RAW and processed JPEG files.
 
@@ -158,7 +179,7 @@ Let's look at an example of how much detail you can pull out of RAW images (some
 
 ![RAW New](RAWnew.jpg)
 
-*Shadows reduced*
+*Shadows lifted*
 </center>
 
 Those two images are identical, with the only difference being that the bottom image has the "shadows" slider in [Lightroom](https://lightroom.adobe.com/) cranked to max. Has the image been saved? No, you would have to spend a lot longer in order to balance the settings, but remember, this was just one slider that I touched. There was all that detail 'hiding' in the file and this sort of thing is just not possible with JPEG.
