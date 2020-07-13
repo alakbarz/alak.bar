@@ -178,7 +178,7 @@ func projectsFileHandler(ctx *macaron.Context) {
 			ctx.Data["Title"] = strings.Title(post.FileName)
 		}
 	}
-	ctx.HTML(http.StatusOK, "project")
+	ctx.HTML(http.StatusOK, "post")
 }
 
 func blogHandler(ctx *macaron.Context) {
@@ -200,7 +200,7 @@ func blogFileHandler(ctx *macaron.Context) {
 			ctx.Data["Title"] = strings.Title(post.FileName)
 		}
 	}
-	ctx.HTML(http.StatusOK, "project")
+	ctx.HTML(http.StatusOK, "post")
 }
 
 func picsHandler(ctx *macaron.Context) {

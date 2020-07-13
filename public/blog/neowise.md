@@ -2,7 +2,7 @@
 title: A Drop In The Ocean
 description: Early morning photography of Comet NEOWISE (C/2020 F3) from Craiglockhart Hill
 date: 2020-07-12
-updated: 2020-07-12
+updated: 2020-07-13
 tags: Photography, Astrophotography, Cameras
 ---
 
@@ -18,7 +18,7 @@ I was so close to packing up my tripod, capping my lens, and giving up. I had be
 
 I had come to see and photograph the comet C/2020 F3, also known as NEOWISE. The journey to the top of the hill was tiring, but the experience of seeing a comet for the first time was going to make that hardship worthwhile. Only one issue:
 
-> Scotland just *had* to be cloudy at the *exact* wrong place and at the *exact* wrong time.
+> Scotland had a habit of being cloudy at the *exact* wrong place and at the *exact* wrong time.
 
 I had some idea of where to expect the comet to be, roughly facing North. I used the [Stellarium](http://stellarium.org/) app on my phone constantly to locate and identify the dots in the sky, and I would highly recommend it. They also have a [free web version](https://stellarium-web.org/).
 
@@ -53,7 +53,12 @@ As I glanced away something in the corner of my eye caught me.
 
 Sure enough, there it was, higher in elevation than I was expecting, but there nonetheless. It was incredibly faint, yet I could see it! An actual comet!!
 
-![Heavent Sent](heavenSent.jpg)
+<center>
+
+![Heaven Sent](heavenSent.jpg)
+
+*Heaven Sent*
+</center>
 
 I was genuinely about to pack up my things and start leaving, but that sudden blip in my peripheral vision reminded me of a (disputed) technique that some astronomers use called [averted vision](https://en.wikipedia.org/wiki/Averted_vision).
 
@@ -80,7 +85,22 @@ Standing up there, staring at the sky, I felt like a drop in an ocean. The comet
 
 If you haven't had the opportunity to just stare at the heavens and wonder what it might all be (or why) then I highly urge you to find a dark, cloudless night and to just look up. You don't require special equipment, it can be done spontaneously, and most of all it is always a rewarding experience.
 
-## Camera Stuff
+## The Descent
+
+I had everything packed away as I was descending the hill, but on the journey down I just had to take my camera out and capture a few more shots.
+
+<center>
+
+![The Tower](theTower2.jpg)
+
+*The Tower (feat. Venus & Aldebaran)*
+</center>
+
+The colours are exaggerated, though not as much as you might think. It truly was a spectacular sight watching the sun rise over Edinburgh.
+
+![The Tower Phone Wallpaper](theTowerPhoneWallpaper.jpg)
+
+## Basic Night Photography Tips
 
 At some point I will be making a beginners guide to astrophotography, but till then here are some camera tips for the curious shooter.
 
@@ -130,8 +150,15 @@ As an amateur photographer you are going to be making mistakes all the time and 
 
 Let's look at an example of how much detail you can pull out of RAW images (sometimes).
 
+<center>
+
+*Original*
+
 ![RAW Original](RAWoriginal.jpg)
 
 ![RAW New](RAWnew.jpg)
+
+*Shadows reduced*
+</center>
 
 Those two images are identical, with the only difference being that the bottom image has the "shadows" slider in [Lightroom](https://lightroom.adobe.com/) cranked to max. Has the image been saved? No, you would have to spend a lot longer in order to balance the settings, but remember, this was just one slider that I touched. There was all that detail 'hiding' in the file and this sort of thing is just not possible with JPEG.
