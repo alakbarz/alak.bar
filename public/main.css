@@ -496,6 +496,10 @@ input[type=text], input[type=email], select, textarea {
   border-color: #000;
 }
 
+.imageCard {
+  padding: 0 10px 0 0;
+}
+
 select {
   background-color: #ddd;
 }
