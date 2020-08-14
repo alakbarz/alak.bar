@@ -1,12 +1,12 @@
 ---
-title: A Drop In The Ocean
+title: A Drop in the Ocean
 description: Early morning photography of Comet NEOWISE (C/2020 F3) from Craiglockhart Hill
 date: 2020-07-12
 updated: 2020-07-13
 tags: Photography, Astrophotography, Cameras
 ---
 
-# A Drop In The Ocean
+# A Drop in the Ocean
 
 *Want to use these as your wallpaper? Go ahead. If you want to use them else where or if you want the original high resolution JPEG (or even RAW files) just [contact me](/#contact).*
 
@@ -86,7 +86,7 @@ Different question first: what is the image below a picture of? Does it look lik
 
 The reason why I gave this blog post that name is because of how perfectly the metaphor captures my experiences of astronomy and the insurmountable feelings of insignificance that the universe can force one to grapple with.
 
-Standing up there, staring at the sky, I felt like a drop in an ocean. The comet, too, was a drop, mere [arcminutes](https://en.wikipedia.org/wiki/Minute_and_second_of_arc) in the sky. How many people would even experience laying eyes upon such a surreal sight? How many would even spare a second thought? Not enough.
+Standing up there, staring at the sky, I felt like a drop in an ocean. The comet, too, was a drop, mere [arcminutes](https://en.wikipedia.org/wiki/Minute_and_second_of_arc) in the sky. How many people would even experience laying eyes upon such a surreal sight? How many would even spare a second thought?
 
 If you haven't had the opportunity to just stare at the heavens and wonder what it might all be (or why) then I highly urge you to find a dark, cloudless night and to just look up. You don't require special equipment, it can be done spontaneously, and most of all it is always a rewarding experience.
 
@@ -131,7 +131,7 @@ At some point I will be making a beginners guide to astrophotography, but till t
 
 If you've ever tried to take a picture of the moon at night, you might have become blindingly aware of how bright the moon can be. In order to get a decent picture you need to [stop down](https://en.wikipedia.org/wiki/Stopping_down) your lens. This is done by increasing the f-stop (reducing the aperture diameter), for example from f/2.8 to f/10.
 
-> Wait a second, now everything else in my image is pitch black.
+> Wait a second, now everything else in my image is pitch black!
 
 Hold on, this is the exciting bit! This is where [exposure bracketing](https://en.wikipedia.org/wiki/Bracketing) comes into play. By taking multiple (at least 2) pictures with differing levels of exposure (brightness), they can then be combined using software to maximise the bright details that were captured in the dark image, and the dark details of the bright image, forming a super-image of sorts.
 

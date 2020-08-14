@@ -16,9 +16,32 @@ import (
 	"github.com/go-macaron/session"
 	"github.com/gomarkdown/markdown"
 	"github.com/metakeule/fmtdate"
+	"github.com/robfig/cron"
 	"golang.org/x/net/html"
 	"gopkg.in/macaron.v1"
 )
+
+type link struct {
+	Name        string
+	Description string
+	FileName    string
+	ShortURL    string
+	URL         string
+}
+
+var linksArr = []link{
+	{Name: "Akilan", Description: "Not boring developer", FileName: "akilan.jpg", URL: "https://akilan.io", ShortURL: "akilan.io"},
+	{Name: "Amaan", Description: "", FileName: "amaan.jpg", URL: "https://amaanakram.tech", ShortURL: "amaanakram.tech"},
+	{Name: "Abdel", Description: "", FileName: "abdel.jpeg", URL: "https://elkabbany.xyz", ShortURL: "elkabbany.xyz"},
+	{Name: "Euan", Description: "", FileName: "euan.jpg", URL: "https://euangordon.me", ShortURL: "euangordon.me"},
+	{Name: "Humaid", Description: "", FileName: "humaid.jpg", URL: "https://humaidq.ae", ShortURL: "humaidq.ae"},
+	{Name: "Hutchie", Description: "", FileName: "hutchie.png", URL: "https://hutchie.scot", ShortURL: "hutchie.scot"},
+	{Name: "ReamSystems", Description: "A small tech startup company based in Scotland, that specializes in data analysis and web services.", FileName: "reamsystems.png", URL: "https://ream.systems", ShortURL: "ream.systems"},
+	{Name: "Rikesh", Description: "Aspiring developer and designer", FileName: "rikesh.jpeg", URL: "http://rikeshmm.com", ShortURL: "rikeshmm.com"},
+	{Name: "Rory", Description: "A collection of my projects and experiences", FileName: "rory.jpg", URL: "http://rorydobson.com/", ShortURL: "rorydobson.com"},
+	{Name: "Ruaridh", Description: "A website showcasing who I am and some of my achievements over the last 3 years", FileName: "ruaridh.jpg", URL: "https://ruaridhmollica.com/", ShortURL: "ruaridhmollica.com"},
+	{Name: "Shiva", Description: "", URL: "https://shiva-m.com/", FileName: "shiva.jpg", ShortURL: "shiva-m.com"},
+}
 
 type reportForm struct {
 	Category    string `form:"category" binding:"Required"`
@@ -51,6 +74,9 @@ func main() {
 	m.Use(macaron.Renderer())
 	m.Use(session.Sessioner())
 	m.Use(csrf.Csrfer())
+
+	c := cron.New()
+	c.AddFunc("@daily", func() { go updateDescriptions() })
 
 	m.Get("/", homeHandler)
 	m.Post("/", csrf.Validate, binding.Bind(contactForm{}), homeHandlerPOST)
@@ -244,8 +270,14 @@ func creditsHandler(ctx *macaron.Context) {
 
 func linksHandler(ctx *macaron.Context) {
 	ctx.Data["Title"] = "Links"
-	ctx.Data["HumaidDesc"] = getDescription("https://www.humaidq.ae")
+	ctx.Data["Links"] = linksArr
 	ctx.HTML(http.StatusOK, "links")
+}
+
+func updateDescriptions() {
+	for i, link := range linksArr {
+		linksArr[i].Description = getDescription(link.URL)
+	}
 }
 
 func trafficHandler(ctx *macaron.Context) {
@@ -297,7 +329,7 @@ func getDescription(url string) string {
 	// Make request
 	response, err := client.Do(request)
 	if err != nil {
-		log.Fatal(err)
+		return ""
 	}
 
 	defer response.Body.Close()
@@ -329,7 +361,7 @@ func getDescription(url string) string {
 					key, val, has := body.TagAttr()
 
 					keyStr := string(key)
-					valStr := string(val)
+					valStr := strings.ToLower(string(val))
 
 					if tagStr == "meta" {
 						if keyStr == "name" && valStr == "description" {

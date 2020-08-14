@@ -7,6 +7,24 @@
   </p>
 </div>
 
+{{range .Links}}
+<div class="mainCard imageCard">
+  <table>
+    <tr>
+      <td class="linksTableImage">
+        <img class="linksImage" src="img/links/{{.FileName}}" alt="{{.Name}}">
+      </td>
+      <td>
+        <a class="linksLink" href="{{.URL}}" target="_blank" rel="noreferrer">{{.ShortURL}}</a>
+        <p>{{.Description}}</p>
+      </td>
+    </tr>
+  </table>
+</div>
+{{end}}
+
+
+<!-- 
 <div class="mainCard imageCard">
   <table>
     <tr>
@@ -147,6 +165,6 @@
       </td>
     </tr>
   </table>
-</div>
+</div> -->
 
 {{template "base/footer" .}}

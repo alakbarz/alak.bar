@@ -9,27 +9,21 @@
 }
 
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
   font-style: normal;
-  font-weight: 400;
-  src: local('Roboto'), url('/font/Roboto-Regular.woff2');
-  font-display: swap;
+  font-named-instance: 'Regular';
+  src: url("/font/Inter.var.woff2?v=3.13") format("woff2");
 }
 
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
   font-style: italic;
-  font-weight: 400;
-  src: local('Roboto Italic'), url('/font/Roboto-Italic.woff2');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  font-style: bold;
-  font-weight: 700;
-  src: local('Roboto Bold'), url('/font/Roboto-Bold.woff2');
-  font-display: swap;
+  font-named-instance: 'Italic';
+  src: url("/font/Inter.var.woff2?v=3.13") format("woff2");
 }
 
 @font-face {
@@ -96,17 +90,27 @@ html {
   box-sizing: border-box;
 }
 
+html {
+  font-family: 'Inter', sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+      font-family: 'Inter var', sans-serif;
+ }
+}
+
 body {
   background-color: #eee;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter var', sans-serif;
 }
 
 a {
   text-decoration: none;
   color: var(--accent);
-  font-weight: bold;
-  font-family: 'Roboto Mono', 'Roboto', sans-serif;
+  font-weight: 900;
+  font-family: 'Inter var', sans-serif;
 }
 
 h1,
@@ -114,8 +118,8 @@ h2,
 h3,
 #title,
 .navlink {
-  font-family: 'Roboto Mono', monospace, sans-serif;
-  font-weight: bold;
+  font-family: 'Inter var', sans-serif;
+  font-weight: 900;
 }
 
 h1, h2, h3 {
@@ -125,8 +129,7 @@ h1, h2, h3 {
 }
 
 p {
-  font-family: 'Roboto', sans-serif;
-  /* font-size: 1em; */
+  font-family: 'Inter var', sans-serif;
   margin: 0 0 20px 0;
 }
 
@@ -137,12 +140,6 @@ ul, li {
 
 .bottomPar {
   margin-bottom: 0;
-}
-
-.subtitle {
-  margin-bottom: 0;
-  font-size: 0.9em !important;
-  font-style: italic;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -255,10 +252,13 @@ ul, li {
   .link {
     font-size: 1em !important;
   }
-}
 
-@media (min-width: 240px) {
-  /* real small */
+  #cardGradient {
+    background: rgba(0,0,0,0.6) !important;
+    height: 100% !important;
+    border-radius: var(--radius) !important;
+    font-size: 0.75em;
+  }
 }
 
 .card {
@@ -312,7 +312,7 @@ header {
   font-size: 2em;
   margin-top: 10px;
   line-height: 50px;
-  font-family: 'Roboto Mono', monospace, sans-serif;
+  font-weight: bolder;
 }
 
 .navlink {
@@ -320,7 +320,6 @@ header {
   font-size: 1.25em;
   padding: 10px 20px 10px 20px;
   border-radius: var(--radius);
-  font-weight: bold;
 }
 
 .navlink:hover {
@@ -344,7 +343,7 @@ main {
 }
 
 footer {
-  padding: 30px 20px 0 20px;
+  padding: 20px 20px 0 20px;
   text-align: center;
   background-color: var(--dark);
   color: white;
@@ -445,6 +444,10 @@ div.desc {
   .responsive {
     width: 100%;
   }
+  #postsCard {
+    height: 35vh !important;
+    position: relative
+  }
 }
 
 .clearfix:after {
@@ -497,7 +500,32 @@ input[type=text], input[type=email], select, textarea {
 }
 
 .imageCard {
-  padding: 0 10px 0 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#postsCard {
+  height: 25vh;
+  position: relative
+}
+
+#cardGradient {
+  background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.75) 75%);
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  border-radius: var(--radius);
+  padding: 20px;
+  height: 100%;
+  display:flex;
+  align-items:flex-end;
+  width: 100%;
+}
+
+#cardContent h2 {
+  font-size: 3em;
+  text-shadow: 4px 4px 0 #52001d;
 }
 
 select {

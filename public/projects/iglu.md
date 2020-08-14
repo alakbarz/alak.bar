@@ -20,7 +20,6 @@ From October through to April, myself and five other students were tasked with c
 
 The SDME is a project in which teams compete to ["design, build and operate a grid-connected, solar powered house."](https://www.hw.ac.uk/news/articles/2019/SolarDecathlon2020.htm)
 
-
 ![iglü rooms page](rooms.png)  
 ![iglü dashboard on desktop](desktopDashboard.png)
 
