@@ -254,9 +254,6 @@ ul, li {
   }
 
   #cardGradient {
-    background: rgba(0,0,0,0.6) !important;
-    height: 100% !important;
-    border-radius: var(--radius) !important;
     font-size: 0.75em;
   }
 }
@@ -458,7 +455,7 @@ div.desc {
 
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], input[type=email], select, textarea {
-  font-family: 'Roboto Mono', monospace, sans-serif;
+  font-family: 'Inter var', sans-serif;
   font-size: 1em;
   width: 100%; /* Full width */
   padding: 10px 20px 10px 20px;
@@ -472,8 +469,8 @@ input[type=text], input[type=email], select, textarea {
 
 .button {
   transition: background-color 0.3s ease;
-  font-family: 'Roboto Mono', monospace, sans-serif;
-  font-weight: bold;
+  font-family: 'Inter var', monospace, sans-serif;
+  font-weight: 900;
   background-color: transparent;
   color: var(--accent);
   font-size: 1.25em;
@@ -503,15 +500,20 @@ input[type=text], input[type=email], select, textarea {
   padding: 0;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 #postsCard {
-  height: 25vh;
-  position: relative
+  height: 250px;
+  position: relative;
+}
+
+#postsCard:hover #cardContent h2 {
+  text-shadow: 0 0 #8b0031;
 }
 
 #cardGradient {
-  background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.75) 75%);
+  background: rgba(0,0,0,0.75);
   color: #fff;
   position: absolute;
   bottom: 0;
@@ -521,11 +523,22 @@ input[type=text], input[type=email], select, textarea {
   display:flex;
   align-items:flex-end;
   width: 100%;
+  transition: opacity 0.3s ease;
+}
+
+#cardGradient:hover {
+  opacity: 25%;
 }
 
 #cardContent h2 {
+  transition: text-shadow 0.3s ease;
   font-size: 3em;
-  text-shadow: 4px 4px 0 #52001d;
+  text-shadow: 4px 4px 0 var(--accent);
+}
+
+#cardContent p {
+  font-size: 1.25em;
+  font-weight: 500;
 }
 
 select {

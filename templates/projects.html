@@ -1,11 +1,16 @@
 {{template "base/header" .}}
-
 {{ range $index, $fields := .Projects }}
-<div class="mainCard">
-  <p class="bottomPar subtitle">{{$fields.DateFormatted}}</p>
-  <h2 class="topHeader"><a href="/projects/{{$fields.FileName}}">{{$fields.Name}}</a></h2>
-  <p class="bottomPar">{{$fields.Description}}</p>
-</div>
+<a href="/projects/{{$fields.FileName}}">
+  <div class="mainCard imageCard" id="postsCard"
+    style="background-image: url(/projects/{{$fields.FileName}}/{{$fields.FileName}}.png);">
+    <div id="cardGradient">
+      <div id="cardContent">
+        <p class="bottomPar subtitle">{{$fields.DateFormatted}}</p>
+        <h2 class="topHeader">{{$fields.Name}}</h2>
+        <p class="bottomPar">{{$fields.Description}}</p>
+      </div>
+    </div>
+  </div>
+</a>
 {{end}}
-
 {{template "base/footer" .}}
