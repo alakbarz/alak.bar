@@ -55,6 +55,8 @@ type contactForm struct {
 }
 
 type post struct {
+	ColourDark    string
+	ColourLight   string
 	Date          time.Time
 	DateFormatted string
 	Description   string
@@ -62,6 +64,7 @@ type post struct {
 	HTML          string
 	Markdown      string
 	Name          string
+	Tags          []string
 }
 
 var projectsArr []post
@@ -132,7 +135,6 @@ func getPosts(directory string) {
 				switch pair[0] {
 				case "title":
 					fields.Name = pair[1]
-					break
 				case "description":
 					fields.Description = pair[1]
 				case "date":
@@ -141,6 +143,13 @@ func getPosts(directory string) {
 					dateFormatted := date.Format("January 2, 2006")
 					fields.Date = date
 					fields.DateFormatted = dateFormatted
+				case "colourlight":
+					fields.ColourLight = pair[1]
+				case "colourdark":
+					fields.ColourDark = pair[1]
+				case "tags":
+					tags := strings.Split(pair[1], ",")
+					fields.Tags = tags
 				}
 			}
 		}
@@ -201,6 +210,8 @@ func projectsFileHandler(ctx *macaron.Context) {
 		if post.FileName == name {
 			ctx.Data["HTML"] = template.HTML(post.HTML)
 			ctx.Data["Name"] = post.FileName
+			ctx.Data["ColourLight"] = post.ColourLight
+			ctx.Data["ColourDark"] = post.ColourDark
 			ctx.Data["Title"] = strings.Title(post.FileName)
 		}
 	}
@@ -223,6 +234,8 @@ func blogFileHandler(ctx *macaron.Context) {
 		if post.FileName == name {
 			ctx.Data["HTML"] = template.HTML(post.HTML)
 			ctx.Data["Name"] = post.FileName
+			ctx.Data["ColourLight"] = post.ColourLight
+			ctx.Data["ColourDark"] = post.ColourDark
 			ctx.Data["Title"] = strings.Title(post.FileName)
 		}
 	}

@@ -1,6 +1,23 @@
 {{template "base/header" .}}
 
 <style type="text/css">
+  body {
+    background-color: #{{.ColourLight}};
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #{{.ColourLight}};
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #{{.ColourDark}};
+    }
+    ::-webkit-scrollbar-track {
+      background: #{{.ColourDark}};
+    }
+  }
+
   .md {
     overflow: auto;
   }

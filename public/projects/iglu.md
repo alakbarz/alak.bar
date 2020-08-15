@@ -2,7 +2,9 @@
 title: iglü, The Smart Home of the Future by Nacdlow
 description: Third year group project spanning two semesters at Heriot-Watt University
 date: 2019-10-11
-tags: Golang, Web, 3D Printing, Video
+colourlight: b3b3b3
+colourdark: 000000
+tags: Golang,Web,3D Printing,Video
 ---
 
 # Iglü, The Smart Home of the Future by Nacdlow

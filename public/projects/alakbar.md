@@ -2,7 +2,9 @@
 title: alak.bar
 description: Making a website from scratch using Macaron and Golang
 date: 2020-05-05
-tags: Golang, Web
+colourlight: ff99bd
+colourdark: 4d001b
+tags: Golang,Web
 ---
 
 # alak.bar

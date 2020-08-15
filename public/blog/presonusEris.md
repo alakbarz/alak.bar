@@ -3,7 +3,9 @@ title: PreSonus Eris E4.5 Studio Monitors Review
 description: Entry level studio monitors that I have been using for over a year
 date: 2020-07-06
 updated: 2020-06-08
-tags: Review, Audio
+colourlight: ff99bd
+colourdark: 4d001b
+tags: Review,Audio
 ---
 
 # PreSonus Eris E4.5 Studio Monitors Review

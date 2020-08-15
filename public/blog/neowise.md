@@ -3,7 +3,9 @@ title: A Drop in the Ocean
 description: Early morning photography of Comet NEOWISE (C/2020 F3) from Craiglockhart Hill
 date: 2020-07-12
 updated: 2020-07-13
-tags: Photography, Astrophotography, Cameras
+colourlight: a1cdf7
+colourdark: 041a2f
+tags: Photography,Astrophotography,Cameras
 ---
 
 # A Drop in the Ocean

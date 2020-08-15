@@ -5,7 +5,7 @@
     style="background-image: url(/blog/{{$fields.FileName}}/{{$fields.FileName}}.png);">
     <div id="cardGradient">
       <div id="cardContent">
-        <p class="bottomPar subtitle">{{$fields.DateFormatted}}</p>
+        <p class="bottomPar subtitle">{{$fields.DateFormatted}} {{range $tag := $fields.Tags}}<span class="tag">{{$tag}}</span>{{end}}</p>
         <h2 class="topHeader">{{$fields.Name}}</h2>
         <p class="bottomPar">{{$fields.Description}}</p>
       </div>
