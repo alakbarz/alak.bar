@@ -5,7 +5,7 @@ date: 2020-07-06
 updated: 2020-06-08
 colourlight: ff99bd
 colourdark: 4d001b
-tags: Review,Audio
+tags: Review, Audio
 ---
 
 # PreSonus Eris E4.5 Studio Monitors Review

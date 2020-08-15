@@ -64,7 +64,7 @@ type post struct {
 	HTML          string
 	Markdown      string
 	Name          string
-	Tags          []string
+	Tags          string
 }
 
 var projectsArr []post
@@ -148,8 +148,8 @@ func getPosts(directory string) {
 				case "colourdark":
 					fields.ColourDark = pair[1]
 				case "tags":
-					tags := strings.Split(pair[1], ",")
-					fields.Tags = tags
+					// tags := strings.Split(pair[1], ",")
+					fields.Tags = pair[1]
 				}
 			}
 		}

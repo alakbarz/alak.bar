@@ -4,7 +4,7 @@ description: A lightweight Lobste.rs reader built using Flutter
 date: 2020-05-10
 colourlight: f6a2a3
 colourdark: 2f0405
-tags: Flutter,Android
+tags: Flutter, Android
 ---
 
 # Pincer for Lobste.rs

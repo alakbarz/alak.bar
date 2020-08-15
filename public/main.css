@@ -444,6 +444,12 @@ div.desc {
     height: 35vh !important;
     position: relative
   }
+  .tags {
+    display: block;
+  }
+  #middot {
+    display: none;
+  }
 }
 
 .clearfix:after {
@@ -548,11 +554,8 @@ textarea {
   padding: 20px;
 }
 
-.tag {
-  background-color: #000;
-  padding: 5px 15px;
-  margin-right: 5px;
-  border-radius: var(--radius);
+.tags {
+  color: #bebebe;
 }
 
 @media only screen and (max-width: 375px) {
