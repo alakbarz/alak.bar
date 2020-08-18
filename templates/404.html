@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <title>{{.Title}}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,17 +13,17 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="#f50057">
   <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
-
-<body class="container">
-  <header></header>
-  <main>
-    <div class="mainCard">
-      <p class="subtitle">[404 ERR]</p>
-      <h1>Hold on...</h1>
-      <p>Looks like you've stumbled onto a bit of an issue.</p>
-      <p>Consider sending a quick report.</p>
-      <a href="/report"><button class="button">REPORT ISSUE</button></a>
-      <a href="/"><button class="button buttonHighlight">HOME</button></a>
+<body>
+  <div class="container">
+    <div>
+      <div class="card-main">
+        <h1 style="font-size: 4em;">Hold on...</h1>
+        <p class="subtitle">Page not found [HTML error 404]</p>
+        <p>Looks like you've stumbled onto a bit of an issue.</p>
+        <p>Consider sending a quick report.</p>
+        <a href="/report"><button class="button buttonHighlight">REPORT ISSUE</button></a>
+        <a href="/"><button class="button">HOME</button></a>
+      </div>
     </div>
-
-    {{template "base/footer" .}}
+</body>
+</html>

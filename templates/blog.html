@@ -1,16 +1,19 @@
 {{template "base/header" .}}
-{{ range $index, $fields := .Blog }}
-<a href="/blog/{{$fields.FileName}}">
-  <div class="mainCard imageCard" id="postsCard"
-    style="background-image: url(/blog/{{$fields.FileName}}/{{$fields.FileName}}.png);">
-    <div id="cardGradient">
-      <div id="cardContent">
-        <p class="bottomPar subtitle">{{$fields.DateFormatted}}<span class="tags"><span id="middot"> &middot; </span>{{$fields.Tags}}</span></p>
-        <h2 class="topHeader">{{$fields.Name}}</h2>
-        <p class="bottomPar">{{$fields.Description}}</p>
+<div class="grid-posts">
+  {{ range $index, $fields := .Blog }}
+  <a href="/blog/{{$fields.FileName}}">
+    <div class="card-main card-image" id="card-post"
+      style="background-image: url(/blog/{{$fields.FileName}}/{{$fields.FileName}}.png);">
+      <div id="cardGradient">
+        <div id="cardContent">
+          <p class="no-bot-margin">{{$fields.DateFormatted}}<span class="tags"><span id="middot"> &middot;
+              </span>{{$fields.Tags}}</span></p>
+          <h2>{{$fields.Name}}</h2>
+          <p class="no-bot-margin">{{$fields.Description}}</p>
+        </div>
       </div>
     </div>
-  </div>
-</a>
-{{end}}
+  </a>
+  {{end}}
+</div>
 {{template "base/footer" .}}

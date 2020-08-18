@@ -5,7 +5,7 @@ date: 2020-07-12
 updated: 2020-07-13
 colourlight: a1cdf7
 colourdark: 041a2f
-tags: Photography, Astrophotography, Cameras
+tags: Astrophotography, Photography, NEOWISE
 ---
 
 # A Drop in the Ocean

@@ -2,10 +2,9 @@
 title: PreSonus Eris E4.5 Studio Monitors Review
 description: Entry level studio monitors that I have been using for over a year
 date: 2020-07-06
-updated: 2020-06-08
 colourlight: ff99bd
 colourdark: 4d001b
-tags: Review, Audio
+tags: Audio, Review
 ---
 
 # PreSonus Eris E4.5 Studio Monitors Review
@@ -89,7 +88,7 @@ The speakers are also not fatiguing for me. Unlike some headphones, which can ge
 Left/right stereo separation works just fine, but don't expect to be able to pinpoint the location of a sound on these. That isn't really a criticism of these particular speakers, but speakers in general. Headphones just work a lot better in this regard, from my experience.
 
 ## Audio Monitoring
-As mentioned, these are entry level studio monitors. During audio editing sessions I will double check my work after using headphones, just to double check that everything sounds fine, which can be a minor inconvenience. That being said, in my experience the speakers alone have been enough, and I rarely need to adjust things.
+As mentioned, these are entry level studio monitors. During audio editing sessions I will double check my work afterwards using headphones, just to make sure that everything sounds fine, which can be a minor inconvenience. I don't fully trust the Eris. That being said, in my experience the speakers alone have been enough, and I rarely need to adjust things.
 
 This is most likely because I don't do professional grade work, thus I'm not looking for absolute perfection; close enough will do.
 

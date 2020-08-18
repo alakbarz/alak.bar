@@ -5,9 +5,8 @@
   --arsenic: #252525;
   --accent: #f50057;
   --radius: 25px;
-  --transition: background-color 0.2s ease;
+  --trans-bg: background-color 0.2s ease;
 }
-
 @font-face {
   font-family: 'Inter var';
   font-weight: 100 900;
@@ -16,7 +15,6 @@
   font-named-instance: 'Regular';
   src: url("/font/Inter.var.woff2?v=3.13") format("woff2");
 }
-
 @font-face {
   font-family: 'Inter var';
   font-weight: 100 900;
@@ -25,94 +23,47 @@
   font-named-instance: 'Italic';
   src: url("/font/Inter.var.woff2?v=3.13") format("woff2");
 }
-
-@font-face {
-  font-family: 'Roboto Mono';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto Mono'), url('/font/RobotoMono-Regular.woff2');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Roboto Mono';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Roboto Mono Italic'), url('/font/RobotoMono-Italic.woff2');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Roboto Mono';
-  font-style: bold;
-  font-weight: 700;
-  src: local('Roboto Mono Bold'), url('/font/RobotoMono-Bold.woff2');
-  font-display: swap;
-}
-
-.mono {
-  font-family: 'Roboto Mono', monospace, sans-serif;
-}
-
-/*Scrollbar Settings*/
 html {
   overflow-y: scroll;
 }
-
-/* Width */
 ::-webkit-scrollbar {
   width: 12px;
 }
-
-/* Track */
 ::-webkit-scrollbar-track {
   background: var(--light);
   border-radius: var(--radius);
 }
-
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.25);
   border-radius: 25px;
 }
-
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(245, 0, 87, 0.5);
 }
-
-/* Handle on click */
 ::-webkit-scrollbar-thumb:active {
   background: var(--accent);
 }
-
 * {
   box-sizing: border-box;
 }
-
 html {
   font-family: 'Inter', sans-serif;
 }
-
 @supports (font-variation-settings: normal) {
   html {
       font-family: 'Inter var', sans-serif;
  }
 }
-
 body {
   background-color: #eee;
   margin: 0;
   font-family: 'Inter var', sans-serif;
 }
-
 a {
   text-decoration: none;
   color: var(--accent);
-  font-weight: 900;
-  font-family: 'Inter var', sans-serif;
 }
-
+a,
 h1,
 h2,
 h3,
@@ -121,13 +72,19 @@ h3,
   font-family: 'Inter var', sans-serif;
   font-weight: 900;
 }
-
 h1, h2, h3 {
-  margin-bottom: 5px;
-  margin-top: 5px;
+  margin: 0 0 2px 0;
   line-height: 1em;
 }
-
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.5em;
+}
 p {
   font-family: 'Inter var', sans-serif;
   margin: 0 0 20px 0;
@@ -135,75 +92,62 @@ p {
 
 ul, li {
   /* font-size: 1em; */
-  margin-top: 5px;
+  margin-top: 0px;
 }
 
-.bottomPar {
+.no-top-margin {
+  margin-top: 0;
+}
+
+.no-bot-margin {
   margin-bottom: 0;
 }
 
 @media (prefers-color-scheme: dark) {
-    /* Track */
   ::-webkit-scrollbar-track {
     background: var(--dark);
   }
-
-  /* Handle */
   ::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.1);
   }
-
-  /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: rgba(245, 0, 87, 0.7);
   }
-
-  /* Handle on click */
   ::-webkit-scrollbar-thumb:active {
     background: var(--accent);
   }
-  
   body {
     background-color: var(--dark);
   }
-
   .card {
     background-color: var(--arsenic) !important;
     color: white !important;
   }
-
-  .mainCard {
+  .card-main {
     background-color: var(--arsenic) !important;
     color: white !important;
   }
-
   .header {
     color: white !important;
   }
-
   .header:hover {
     background-color: var(--accent) !important;
     color: black !important;
   }
-
-  #aboutImg {
+  #about-img {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   }
-
-  div.gallery {
+  .gallery-img {
     background-color: var(--arsenic) !important;
     color: white !important;
   }
-
-  div.gallery:hover {
+  .gallery-img:hover {
     background-color: var(--accent) !important;
     color: black !important;
   }
-
   .white {
     background-color: white !important;
   }
-
   input[type=text], input[type=email], select, textarea {
     background-color: #555 !important;
     color: #fff;
@@ -217,27 +161,23 @@ ul, li {
   }
 }
 
+body {
+  min-height: 100%;
+  margin: auto !important;
+}
+
 .container {
-  display: flex;
-  flex-direction: column;
-  grid-template-columns: auto 100px 1fr 2fr;
-  min-height: 100vh;
+  margin: 10px 10px 0 10px;
 }
 
 @media (min-width: 1000px) {
   body {
-    width: 1000px;
-    justify-content: center;
-    margin: auto;
+    max-width: 1000px;
   }
 }
 
 @media (min-width: 768px) {
-  .container {
-    display: grid;
-    grid-template-columns: 200px 1fr 200px;
-    grid-template-rows: auto 1fr auto;
-  }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -259,15 +199,14 @@ ul, li {
 }
 
 .card {
-  margin: 10px 10px 0 10px;
+  margin: 10px 0;
   border-radius: var(--radius);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
   background-color: white;
   color: black;
 }
 
-.mainCard {
-  margin: 10px 10px 0 10px;
+.card-main {
   border-radius: var(--radius);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
   background-color: white;
@@ -275,7 +214,7 @@ ul, li {
   padding: 20px;
 }
 
-.mainCard#aboutCard {
+.card-main#card-about {
   min-height: 170px;
 }
 
@@ -284,12 +223,12 @@ ul, li {
   color: white !important;
 }
 
-header {
-  grid-column-start: 2;
+.mono {
+  font-family: "Roboto Mono", monospace;
 }
 
 .header {
-  transition: var(--transition);
+  transition: var(--trans-bg);
   padding: 0;
   border-radius: var(--radius);
   height: 50px;
@@ -333,27 +272,15 @@ header {
   background-color: var(--background);
 }
 
-main {
-  flex: 1;
-  grid-column: span 3;
-  color: white;
-}
-
-footer {
+.footer {
   padding: 20px 20px 0 20px;
   text-align: center;
-  background-color: var(--dark);
-  color: white;
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
-  grid-column-start: 2;
+  margin-bottom: 0;
 }
 
-@media only screen and (max-width: 400px) {
-  .palette {
-    width: 50px !important;
-  }
-}
+
 
 .palette-container {
   width: auto;
@@ -378,7 +305,7 @@ footer {
   background-color: #aaa;
 }
 
-#aboutImg {
+#about-img {
   float: right;
   width: 125px;
   border-radius: 100%;
@@ -386,51 +313,50 @@ footer {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
 }
 
-/* Gallery */
+/* POSTS */
+.grid-posts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
 
+/* GALLERY */
 .gallery-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
-  margin: 10px 10px 0 10px;
 }
-
-div.gallery {
+.gallery-img {
   transition: all 0.3s ease;
   border-radius: var(--radius);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
   padding: 0 0 10px 0;
   background-color: #fff;
 }
-
-div.gallery:hover {
+.gallery-img:hover {
   background-color: var(--accent);
   color: white;
   padding: 10px 10px 20px 10px;
 }
-
-div.gallery > img {
+.gallery-img > img {
   transition: border-radius 0.3s ease;
 }
-
-div.gallery:hover > img {
+.gallery-img:hover > img {
   transition: border-radius 0.3s ease;
   border-radius: 15px;
 }
-
-div.gallery img {
+.gallery-img img {
   width: 100%;
   height: auto;
   border-radius: var(--radius) var(--radius) 0 0;
 }
-
-div.desc {
+.gallery-img-desc {
   padding: 10px 5px 5px 5px;
   text-align: center;
   font-size: 1.1em;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1012px) {
   .gallery-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -440,8 +366,8 @@ div.desc {
   .gallery-grid {
     grid-template-columns: 1fr;
   }
-  #postsCard {
-    height: 35vh !important;
+  #card-post {
+    height: 400px !important;
     position: relative
   }
   .tags {
@@ -452,10 +378,10 @@ div.desc {
   }
 }
 
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+@media only screen and (max-width: 400px) {
+  .palette {
+    width: 50px !important;
+  }
 }
 
 /* Style inputs with type="text", select elements and textareas */
@@ -501,19 +427,19 @@ input[type=text], input[type=email], select, textarea {
   border-color: #000;
 }
 
-.imageCard {
+.card-image {
   padding: 0;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-#postsCard {
+#card-post {
   height: 250px;
   position: relative;
 }
 
-#postsCard:hover #cardContent h2 {
+#card-post:hover #cardContent h2 {
   text-shadow: 0 0 #8b0031;
 }
 

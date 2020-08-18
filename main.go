@@ -36,10 +36,10 @@ var linksArr = []link{
 	{Name: "Euan", Description: "", FileName: "euan.jpg", URL: "https://euangordon.me", ShortURL: "euangordon.me"},
 	{Name: "Humaid", Description: "", FileName: "humaid.jpg", URL: "https://humaidq.ae", ShortURL: "humaidq.ae"},
 	{Name: "Hutchie", Description: "", FileName: "hutchie.png", URL: "https://hutchie.scot", ShortURL: "hutchie.scot"},
-	{Name: "ReamSystems", Description: "A small tech startup company based in Scotland, that specializes in data analysis and web services.", FileName: "reamsystems.png", URL: "https://ream.systems", ShortURL: "ream.systems"},
+	{Name: "ReamSystems", Description: "", FileName: "reamsystems.png", URL: "https://ream.systems", ShortURL: "ream.systems"},
 	{Name: "Rikesh", Description: "Aspiring developer and designer", FileName: "rikesh.jpeg", URL: "http://rikeshmm.com", ShortURL: "rikeshmm.com"},
 	{Name: "Rory", Description: "A collection of my projects and experiences", FileName: "rory.jpg", URL: "http://rorydobson.com/", ShortURL: "rorydobson.com"},
-	{Name: "Ruaridh", Description: "A website showcasing who I am and some of my achievements over the last 3 years", FileName: "ruaridh.jpg", URL: "https://ruaridhmollica.com/", ShortURL: "ruaridhmollica.com"},
+	{Name: "Ruaridh", Description: "", FileName: "ruaridh.jpg", URL: "https://ruaridhmollica.com/", ShortURL: "ruaridhmollica.com"},
 	{Name: "Shiva", Description: "", URL: "https://shiva-m.com/", FileName: "shiva.jpg", ShortURL: "shiva-m.com"},
 }
 
@@ -80,6 +80,7 @@ func main() {
 
 	c := cron.New()
 	c.AddFunc("@daily", func() { go updateDescriptions() })
+	c.Start()
 
 	m.Get("/", homeHandler)
 	m.Post("/", csrf.Validate, binding.Bind(contactForm{}), homeHandlerPOST)
@@ -148,7 +149,6 @@ func getPosts(directory string) {
 				case "colourdark":
 					fields.ColourDark = pair[1]
 				case "tags":
-					// tags := strings.Split(pair[1], ",")
 					fields.Tags = pair[1]
 				}
 			}
@@ -334,7 +334,7 @@ func getDescription(url string) string {
 	// Create and modify HTTP request before sending
 	request, err := http.NewRequest("GET", url, nil)
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
 	}
 
 	request.Header.Set("User-Agent", "Alakbot v0.1 (+http://alak.bar/alakbot)")
@@ -380,7 +380,12 @@ func getDescription(url string) string {
 						if keyStr == "name" && valStr == "description" {
 							isDesc = true
 						} else if keyStr == "content" {
-							description = valStr
+							if valStr == "" {
+								break
+							} else {
+								firstLetter := valStr[0:1]
+								description = strings.Title(string(firstLetter)) + valStr[1:]
+							}
 						}
 					}
 

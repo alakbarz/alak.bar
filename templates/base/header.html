@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/main.css">
   <link rel="shortcut icon" href="/img/profile.jpg" />
-  <link rel="icon" sizes="400x400" href="/img/profile.jpg"> 
+  <link rel="icon" sizes="400x400" href="/img/profile.jpg">
   <link rel="apple-touch-icon" href="/img/profile.jpg" />
   <meta name="Description" content="Alakbar's personal website and portfolio">
   <meta name="theme-color" content="#f50057">
@@ -15,14 +15,13 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 
-<body class="container">
-  <header>
+<body>
+  <div class="container">
     <a href="/">
       <div class="header {{if eq .Title "Home"}}active{{end}}">
         <span id="pageTitle">Alakbar</span>
       </div>
     </a>
-
     <div class="nav card">
       <a href="/" id="main">
         <div class="navlink {{if eq .Title "Home"}}active{{end}}"><span>HOME</span></div>
@@ -37,6 +36,4 @@
         <div class="navlink {{if eq .Title "Pictures"}}active{{end}}"><span>PICS</span></div>
       </a>
     </div>
-  </header>
-  
-  <main>
+    <div>

@@ -1,60 +1,42 @@
 {{template "base/header" .}}
-
-<div class="mainCard" id="aboutCard">
-  <img src="img/profile.jpg" alt="A picture of Alakbar" id="aboutImg" />
-
+<div class="grid-posts">
+<div class="card-main" id="card-about">
+  <img src="img/profile.jpg" alt="A picture of Alakbar" id="about-img" />
   <p>I'm a computer science student in my third year at Heriot-Watt University.</p>
-
-  <p> I take <a href="https://www.instagram.com/alak.barz/" target="_blank" rel="noreferrer">pictures</a>.
-    <br>
-    I edit <a href="https://www.youtube.com/channel/UCLJHVfPzheLVnbz6QtyxoRA?view_as=subscriber" target="_blank"
-      rel="noreferrer">videos</a>.
-    <br>
-    I <a href="https://www.github.com/alakbarz" target="_blank" rel="noreferrer">code</a>... or at least I try to
-    anyway.
-  </p>
-
-  <p class="bottomPar">I like being creative and making stuff.</p>
+  <p>I take <a href="https://www.instagram.com/alak.barz/" target="_blank" rel="noreferrer">pictures</a>.
+  <p>I edit <a href="https://www.youtube.com/channel/UCLJHVfPzheLVnbz6QtyxoRA?view_as=subscriber" target="_blank" rel="noreferrer">videos</a>.</p>
+  <p>I <a href="https://www.github.com/alakbarz" target="_blank" rel="noreferrer">code</a>... or at least I try to anyway.</p>
+  <p class="no-bot-margin">I like being creative and making stuff.</p>
 </div>
-
-<div class="mainCard">
+<div class="card-main">
   <h2>Current Projects</h2>
-  <p class="bottomPar">This is a description waiting to happen.</p>
+  <p class="no-bot-margin">This is a description waiting to happen.</p>
 </div>
-
-<div class="mainCard" id="otherSitesCard">
+<div class="card-main" id="otherSitesCard">
   <h2><a href="links">Other Sites</a></h2>
-  <p class="bottomPar">Check out websites made by some of my peers.</p>
+  <p class="no-bot-margin">Check out websites made by some of my peers.</p>
 </div>
-
-<div class="mainCard">
+<div class="card-main">
   <h2 id="contact">Contact Information</h2>
-
   <p>
-    Email: me<span style="display:none;"> and i </span>@alak.<span style="display:none;"> oop </span>bar
+    <b>Email: </b><span style="display:none;"> and i </span>@alak.<span style="display:none;"> oop </span>bar
     <br>
-    Twitter: <a href="https://twitter.com/_alakbar_" target="_blank" rel="noreferrer">@_alakbar_</a> (least preferred
-    method of comms)
+    <b>Twitter: </b><a href="https://twitter.com/_alakbar_" target="_blank" rel="noreferrer">@_alakbar_</a> (least preferred method of comms)
   </p>
-
   <h2 id="contact">Contact Form</h2>
   <form action="" method="POST">
     <input type="hidden" name="_csrf" value="{{.csrf_token}}">
-
     <label for="name">
-      <h3>Your Name or Email (optional)</h3>
+      <h3>Name or Email (optional)</h3>
     </label>
     <input id="name" type="text" name="name" placeholder="Your name or email here">
-
     <label for="subject">
-      <h3>Description</h3>
+      <h3>Message</h3>
     </label>
     <textarea id="subject" name="description" placeholder="Your message here" style="height:200px"
-      oninvalid="this.setCustomValidity('Text is required before submitting')" oninput="this.setCustomValidity('')"
-      required></textarea>
-
+      oninvalid="this.setCustomValidity('Text is required before submitting')" oninput="this.setCustomValidity('')" required></textarea>
     <input type="submit" class="button buttonHighlight" value="SUBMIT">
   </form>
 </div>
-
+</div>
 {{template "base/footer" .}}
