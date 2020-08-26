@@ -10,16 +10,15 @@
   <link rel="apple-touch-icon" href="/img/profile.jpg" />
   <meta name="title" content="{{.Title}}">
   <meta name="twitter:title" content="{{.Title}}"/>
+  <meta name="twitter:card" content="summary_large_image"/>
   {{if .BlogDesc}}
   <meta name="image" content="https://alak.bar/blog/{{.Name}}/{{.Name}}.png">
   <meta name="description" content="{{.BlogDesc}}">
-  <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:image" content="https://alak.bar/blog/{{.Name}}/{{.Name}}.png"/>
   <meta name="twitter:description" content="{{.BlogDesc}}">
   {{else if .ProjDesc}}
   <meta name="image" content="https://alak.bar/projects/{{.Name}}/{{.Name}}.png">
   <meta name="description" content="{{.ProjDesc}}">
-  <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:image" content="https://alak.bar/projects/{{.Name}}/{{.Name}}.png"/>
   <meta name="twitter:description" content="{{.ProjDesc}}">
   {{else}}
