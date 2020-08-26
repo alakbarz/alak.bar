@@ -8,8 +8,15 @@
   <link rel="shortcut icon" href="/img/profile.jpg" />
   <link rel="icon" sizes="400x400" href="/img/profile.jpg">
   <link rel="apple-touch-icon" href="/img/profile.jpg" />
-  {{if .Desc}}
-  <meta name="description" content="{{.Desc}}">
+
+  
+  <meta name="title" content="{{.Title}}">
+  {{if .BlogDesc}}
+  <meta name="image" content="https://alak.bar/blog/{{.Name}}/{{.Name}}.png">
+  <meta name="description" content="{{.BlogDesc}}">
+  {{else if .ProjDesc}}
+  <meta name="image" content="https://alak.bar/projects/{{.Name}}/{{.Name}}.png">
+  <meta name="description" content="{{.ProjDesc}}">
   {{else}}
   <meta name="description" content="Alakbar's personal website and portfolio">
   {{end}}

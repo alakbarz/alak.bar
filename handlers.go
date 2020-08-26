@@ -47,7 +47,7 @@ func projectsFileHandler(ctx *macaron.Context) {
 			ctx.Data["ColourLight"] = post.ColourLight
 			ctx.Data["ColourDark"] = post.ColourDark
 			ctx.Data["Title"] = strings.Title(post.FileName)
-			ctx.Data["Desc"] = post.Description
+			ctx.Data["ProjDesc"] = post.Description
 		}
 	}
 	ctx.HTML(http.StatusOK, "post")
@@ -72,7 +72,7 @@ func blogFileHandler(ctx *macaron.Context) {
 			ctx.Data["ColourLight"] = post.ColourLight
 			ctx.Data["ColourDark"] = post.ColourDark
 			ctx.Data["Title"] = strings.Title(post.FileName)
-			ctx.Data["Desc"] = post.Description
+			ctx.Data["BlogDesc"] = post.Description
 		}
 	}
 	ctx.HTML(http.StatusOK, "post")
