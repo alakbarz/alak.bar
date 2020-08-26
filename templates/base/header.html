@@ -8,7 +8,11 @@
   <link rel="shortcut icon" href="/img/profile.jpg" />
   <link rel="icon" sizes="400x400" href="/img/profile.jpg">
   <link rel="apple-touch-icon" href="/img/profile.jpg" />
+  {{if .Desc}}
+  <meta name="description" content="{{.Desc}}">
+  {{else}}
   <meta name="description" content="Alakbar's personal website and portfolio">
+  {{end}}
   <meta name="theme-color" content="#f50057">
   <meta name="msapplication-navbutton-color" content="#f50057">
   <meta name="apple-mobile-web-app-status-bar-style" content="#f50057">
