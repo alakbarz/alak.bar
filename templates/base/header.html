@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-  <title>{{.Title}} | Alakbar</title>
+  <title>{{if eq .Title "Home"}}Alakbar{{else}}{{.Title}} | Alakbar{{end}}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/main.css">
   <link rel="shortcut icon" href="/img/profile.jpg" />
   <link rel="icon" sizes="400x400" href="/img/profile.jpg">
   <link rel="apple-touch-icon" href="/img/profile.jpg" />
-  <meta name="Description" content="Alakbar's personal website and portfolio">
+  <meta name="description" content="Alakbar's personal website and portfolio">
   <meta name="theme-color" content="#f50057">
   <meta name="msapplication-navbutton-color" content="#f50057">
   <meta name="apple-mobile-web-app-status-bar-style" content="#f50057">
