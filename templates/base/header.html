@@ -8,17 +8,24 @@
   <link rel="shortcut icon" href="/img/profile.jpg" />
   <link rel="icon" sizes="400x400" href="/img/profile.jpg">
   <link rel="apple-touch-icon" href="/img/profile.jpg" />
-
-  
   <meta name="title" content="{{.Title}}">
+  <meta name="twitter:title" content="{{.Title}}"/>
   {{if .BlogDesc}}
   <meta name="image" content="https://alak.bar/blog/{{.Name}}/{{.Name}}.png">
   <meta name="description" content="{{.BlogDesc}}">
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image" content="https://alak.bar/blog/{{.Name}}/{{.Name}}.png"/>
+  <meta name="twitter:description" content="{{.BlogDesc}}">
   {{else if .ProjDesc}}
   <meta name="image" content="https://alak.bar/projects/{{.Name}}/{{.Name}}.png">
   <meta name="description" content="{{.ProjDesc}}">
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image" content="https://alak.bar/projects/{{.Name}}/{{.Name}}.png"/>
+  <meta name="twitter:description" content="{{.ProjDesc}}">
   {{else}}
   <meta name="description" content="Alakbar's personal website and portfolio">
+  <meta name="image" content="https://alak.bar/blog/img/profile.jpg">
+  <meta name="twitter:image" content="https://alak.bar/img/profile.jpg"/>
   {{end}}
   <meta name="theme-color" content="#f50057">
   <meta name="msapplication-navbutton-color" content="#f50057">
