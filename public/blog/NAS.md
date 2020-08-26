@@ -4,7 +4,7 @@ description: Walking through my process of building a home NAS using second hand
 date: 2020-08-18
 colourlight: b3b3b3
 colourdark: 101010
-tags: FreeNAS, Home Server, Tutorial,
+tags: FreeNAS, Home Server, Tutorial
 ---
 
 # Home NAS Under £200
