@@ -13,7 +13,6 @@ tags: Golang, Web
 
 ## Links
 
-Website: [edi.myhwu.com](https://edi.myhwu.com/)  
 Github: [/hw-cs-reps/platform](https://github.com/hw-cs-reps/platform)
 
 *If you end up visiting the site, please look, but do not touch. It is a production build actively being used. Thank you.*
@@ -86,8 +85,6 @@ Platform has an anonymous ticketing system where students can create tickets (is
 In order to keep upvotes anonymous, Platform assigns each user a session identifier, which is a hash of their IP address, user-agent header, and a randomly generated number.
 
 Students that want to create tickets or leave comments are given a temporary username so that they may interact with the comments if needed. This is all done seamlessly with no extra effort required from the student - no logins or passwords! This does open Platform to abuse, unfortunately, but it's a calculated risk; one that gives a large degree of anonymity and seamlessness for the students.
-
-This is all explained in detail in our [privacy policy](https://edi.myhwu.com/privacy).
 
 ### Miscellaneous
 
