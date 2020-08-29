@@ -15,7 +15,7 @@ tags: Golang, Web
 
 Github: [/hw-cs-reps/platform](https://github.com/hw-cs-reps/platform)
 
-*If you end up visiting the site, please look, but do not touch. It is a production build actively being used. Thank you.*
+*If you end up finding the site, please look, but do not touch. It is a production build actively being used. Thank you.*
 
 <center>
 
