@@ -10,7 +10,7 @@
 @font-face {
   font-family: 'Inter var';
   font-weight: 100 900;
-  font-display: swap;
+  font-display: block;
   font-style: normal;
   font-named-instance: 'Regular';
   src: url("/font/Inter.var.woff2?v=3.13") format("woff2");
@@ -18,13 +18,10 @@
 @font-face {
   font-family: 'Inter var';
   font-weight: 100 900;
-  font-display: swap;
+  font-display: block;
   font-style: italic;
   font-named-instance: 'Italic';
   src: url("/font/Inter.var.woff2?v=3.13") format("woff2");
-}
-html {
-  overflow-y: scroll;
 }
 .main {
   -webkit-animation: fadein 0.5s ease; /* Safari, Chrome and Opera > 12.1 */
@@ -79,11 +76,13 @@ html {
 }
 html {
   font-family: 'Inter', sans-serif;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 @supports (font-variation-settings: normal) {
   html {
-      font-family: 'Inter var', sans-serif;
- }
+    font-family: 'Inter var', sans-serif;
+  }
 }
 body {
   background-color: #eee;
@@ -92,7 +91,7 @@ body {
   margin: auto !important;
 }
 .container {
-  margin: 0 10px 0 10px;
+  margin: 10px 10px 0 10px;
 }
 a {
   text-decoration: none;
@@ -102,12 +101,13 @@ a,
 h1,
 h2,
 h3,
+h4,
 #title,
 .navlink {
   font-family: 'Inter var', sans-serif;
   font-weight: 900;
 }
-h1, h2, h3 {
+h1, h2, h3, h4 {
   margin: 0 0 2px 0;
   line-height: 1em;
 }
@@ -119,6 +119,9 @@ h2 {
 }
 h3 {
   font-size: 1.5em;
+}
+h4 {
+  font-size: 1.25em;
 }
 p {
   font-family: 'Inter var', sans-serif;
@@ -202,25 +205,18 @@ ul, li {
   }
 }
 
-@media (min-width: 768px) {
-
-}
-
 @media only screen and (max-width: 768px) {
   #main {
     display: none;
   }
-
   p {
     font-size: medium !important;
   }
-
   .link {
     font-size: 1em !important;
   }
-
-  #cardGradient {
-    font-size: 0.75em;
+  #card-post-desc {
+    font-size: initial !important;
   }
 }
 
@@ -391,9 +387,11 @@ ul, li {
   .gallery-grid {
     grid-template-columns: 1fr;
   }
-  #card-post {
+  .card-post {
     height: 400px !important;
-    position: relative
+  }
+  .card-post-small {
+    height: 100px !important;
   }
   .tags {
     display: block;
@@ -459,12 +457,21 @@ input[type=text], input[type=email], select, textarea {
   background-position: center;
 }
 
-#card-post {
+.card-post {
   height: 250px;
   position: relative;
 }
 
-#card-post:hover #cardContent h2 {
+.card-post-small {
+  height: 125px !important;
+  position: relative;
+}
+
+.card-post-small #cardContent h2 {
+  font-size: 32px;
+}
+
+.card-post:hover #cardContent h2 {
   text-shadow: 0 0 #8b0031;
 }
 
@@ -495,6 +502,10 @@ input[type=text], input[type=email], select, textarea {
 #cardContent p {
   font-size: 1.25em;
   font-weight: 500;
+}
+
+#card-post-desc {
+  font-size: 1em !important;
 }
 
 select {
@@ -542,6 +553,10 @@ table, tr, td {
   padding: 0;
   border-collapse: collapse;
   /* border: solid 1px #000; */
+}
+
+td {
+  padding-right: 10px;
 }
 
 table {

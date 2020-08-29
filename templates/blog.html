@@ -2,7 +2,7 @@
 <div class="grid-posts">
   {{ range $index, $fields := .Blog }}
   <a href="/blog/{{$fields.FileName}}">
-    <div class="card-main card-image" id="card-post"
+    <div class="card-main card-image card-post"
       style="background-image: url(/blog/{{$fields.FileName}}/{{$fields.FileName}}.png);">
       <div id="cardGradient">
         <div id="cardContent">

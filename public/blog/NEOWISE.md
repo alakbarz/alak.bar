@@ -10,7 +10,7 @@ tags: Astrophotography, Photography, NEOWISE
 
 # A Drop in the Ocean
 
-*Want to use these as your wallpaper? Go ahead. If you want to use them else where or if you want the original high resolution JPEG (or even RAW files) just [contact me](/#contact).*
+*Want to use these as your wallpaper? Go ahead. If you want to use them elsewhere or if you want the original high resolution JPEG (or even RAW files) just [contact me](/#contact). These images are not in the public domain... yet.*
 
 I was so close to packing up my tripod, capping my lens, and giving up. I had been standing on top of Craiglockhart Hill for over thirty minutes now, with a cold breeze pilfering my precious warmth from me.
 
