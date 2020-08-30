@@ -62,10 +62,10 @@ func getDescription(url string) string {
 					key, val, has := body.TagAttr()
 
 					keyStr := string(key)
-					valStr := strings.ToLower(string(val))
+					valStr := string(val)
 
 					if tagStr == "meta" {
-						if keyStr == "name" && valStr == "description" {
+						if keyStr == "name" && strings.ToLower(valStr) == "description" {
 							isDesc = true
 						} else if keyStr == "content" {
 							if valStr == "" {
