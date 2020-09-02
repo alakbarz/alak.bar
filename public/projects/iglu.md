@@ -10,7 +10,14 @@ tags: 3D Printing, Golang, Video, Web
 # Iglü, The Smart Home of the Future by Nacdlow
 *Third year group project spanning two semesters at Heriot-Watt University*
 
-## Others Involved
+<center>
+
+![The Nacdlow team](team.jpg)
+
+*The Nacdlow team*
+</center>
+
+## Nacdlow Team
 
 <a href="https://amaanakram.tech/" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Amaan</button></a>
 <a href="https://humaidq.ae/" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Humaid</button></a>
