@@ -17,7 +17,7 @@ tags: Golang, Web
 
 ## Links
 
-<a href="https://github.com/hw-cs-reps/platform" class="no-raise" target="_blank" rel="noreferrer"><button class="button buttonHighlight">Github</button></a>
+<a href="https://github.com/hw-cs-reps/platform" class="no-raise" target="_blank" rel="noreferrer"><button class="button buttonHighlight">GitHub</button></a>
 
 *If you end up finding the site, please look, but do not touch. It is a production build actively being used. Thank you.*
 

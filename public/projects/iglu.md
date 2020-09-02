@@ -22,7 +22,7 @@ tags: 3D Printing, Golang, Video, Web
 
 <a href="https://demo.nacdlow.com" class="no-raise" target="_blank" rel="noreferrer"><button class="button buttonHighlight">Demo</button></a>
 <a href="https://nacdlow.com" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Website</button></a>
-<a href="https://github.com/Nacdlow" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Github</button></a>
+<a href="https://github.com/Nacdlow" class="no-raise" target="_blank" rel="noreferrer"><button class="button">GitHub</button></a>
 <a href="https://www.youtube.com/watch?v=KMfItuTf2jQ" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Video</button></a>
 
 <center>
