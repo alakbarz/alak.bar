@@ -70,6 +70,7 @@ func main() {
 	c := cron.New()
 	c.AddFunc("@daily", func() { go updateDescriptions() })
 	c.Start()
+	go updateDescriptions()
 	m.Get("/", homeHandler)
 	m.Post("/", csrf.Validate, binding.Bind(contactForm{}), homeHandlerPOST)
 	m.Get("/projects", projectsHandler)

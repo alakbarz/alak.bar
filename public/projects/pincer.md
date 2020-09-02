@@ -10,6 +10,10 @@ tags: Android, Flutter
 # Pincer for Lobste.rs
 *A lightweight [Lobste.rs](https://lobste.rs/) reader*
 
+## Links
+<a href="https://play.google.com/store/apps/details?id=bar.alak.pincer" class="no-raise" target="_blank" rel="noreferrer"><button class="button buttonHighlight">Play Store</button></a>
+<a href="https://github.com/alakbarz/pincer" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Github</button></a>
+
 ![Trending page of Pincer](trending.png)
 
 ## What is Pincer?

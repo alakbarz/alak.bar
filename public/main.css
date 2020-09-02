@@ -89,6 +89,7 @@ body {
   margin-top: 0 !important;
   font-family: 'Inter var', sans-serif;
   margin: auto !important;
+  font-size: 18px;
 }
 .container {
   margin: 10px 10px 0 10px;
@@ -97,7 +98,23 @@ a {
   text-decoration: none;
   color: var(--accent);
 }
+p a, ul a, ol a, td a, .footer a {
+  display: inline-block;
+  text-shadow: 0px 0px var(--accent);
+  transition: transform 0.3s ease, text-shadow 0.3s ease, color 0.2s ease;
+}
+p a:hover, ul a:hover, ol a:hover, td a:hover, .footer a:hover {
+  text-shadow: 0.5px 0.5px   var(--accent),
+                 1px   1px   var(--accent),
+                 1.5px 1.5px var(--accent),
+                 2px   2px   var(--accent),
+                 2.5px 2.5px var(--accent),
+                 3px   3px   var(--accent);
+  transform: translate(-3px, -3px);
+  color: #000;
+}
 a,
+b,
 h1,
 h2,
 h3,
@@ -190,6 +207,9 @@ ul, li {
     background-color: #555 !important;
     color: #fff;
   }
+  p a:hover, ul a:hover, ol a:hover, td a:hover, .footer a:hover {
+    color: #fff;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -209,14 +229,24 @@ ul, li {
   #main {
     display: none;
   }
-  p {
-    font-size: medium !important;
-  }
   .link {
     font-size: 1em !important;
   }
+  .navlink {
+    font-size: 20px !important;
+  }
+  #pageTitle {
+    font-size: 32px !important;
+  }
   #card-post-desc {
     font-size: initial !important;
+  }
+  p a, ul a, ol a, td a, .footer a {
+    display: inline;
+  }
+  p a:hover, ul a:hover, ol a:hover, td a:hover, .footer a:hover {
+    text-shadow: none;
+    transform: none;
   }
 }
 
@@ -374,7 +404,6 @@ ul, li {
 .gallery-img-desc {
   padding: 10px 5px 5px 5px;
   text-align: center;
-  font-size: 1.1em;
 }
 
 @media only screen and (max-width: 1012px) {
@@ -468,11 +497,11 @@ input[type=text], input[type=email], select, textarea {
 }
 
 .card-post-small #cardContent h2 {
-  font-size: 32px;
+  font-size: 36px;
 }
 
 .card-post:hover #cardContent h2 {
-  text-shadow: 0 0 #8b0031;
+  text-shadow: 0 0 var(--accent);
 }
 
 #cardGradient {
@@ -495,12 +524,11 @@ input[type=text], input[type=email], select, textarea {
 
 #cardContent h2 {
   transition: text-shadow 0.3s ease;
-  font-size: 3em;
+  font-size: 2.75em;
   text-shadow: 4px 4px 0 var(--accent);
 }
 
 #cardContent p {
-  font-size: 1.25em;
   font-weight: 500;
 }
 
@@ -520,17 +548,18 @@ textarea {
   color: #bebebe;
 }
 
-@media only screen and (max-width: 375px) {
-  td > h2 {
-    font-size: 1em;
+@media only screen and (max-width: 550px) {
+  td > p {
+    font-size: 0.75em !important;
   }
-
+  td > h2 {
+    font-size: 0.75em;
+  }
   .linksLink {
     font-size: 1em !important;
   }
-
-  td > p {
-    font-size: 0.9em !important;
+  .linksTableImage {
+    width: 45% !important;
   }
 }
 
@@ -538,13 +567,15 @@ textarea {
   .linksImage {
     width: 100% !important;
   }
-  
   .linksTableImage {
     width: 25% !important;
+    padding-right: 15px;
   }
-
   .linksLink {
     font-size: 2em !important;
+  }
+  .links-desc {
+    font-size: 0.9em;
   }
 }
 
@@ -555,7 +586,7 @@ table, tr, td {
   /* border: solid 1px #000; */
 }
 
-td {
+.td-right {
   padding-right: 10px;
 }
 
@@ -567,11 +598,11 @@ table {
   width: 100%;
   border-radius: var(--radius) 0 0 var(--radius);
   display: block;
-  padding-right: 15px;
+  padding-right: 10px;
 }
 
 .linksTableImage {
-  width: 40%;
+  width: 35%;
 }
 
 .linksLink {
@@ -597,17 +628,6 @@ blockquote {
 
 blockquote > p {
   margin-bottom: 0;
-}
-
-center em {
-  background-color: rgba(245, 0, 87, 0.25);
-  border-radius: 10px;
-  padding: 5px 15px 5px 15px;
-  display: inline-block;
-}
-
-center p {
-  margin-bottom: 10px;
 }
 
 blockquote em {

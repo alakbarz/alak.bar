@@ -11,9 +11,13 @@ tags: Golang, Web
 
 *Online ticketing system, announcements, and resources for students*
 
+## Others Involved
+
+<a href="https://humaidq.ae/" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Humaid</button></a>
+
 ## Links
 
-Github: [/hw-cs-reps/platform](https://github.com/hw-cs-reps/platform)
+<a href="https://github.com/hw-cs-reps/platform" class="no-raise" target="_blank" rel="noreferrer"><button class="button buttonHighlight">Github</button></a>
 
 *If you end up finding the site, please look, but do not touch. It is a production build actively being used. Thank you.*
 
