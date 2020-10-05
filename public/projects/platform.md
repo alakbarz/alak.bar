@@ -13,13 +13,11 @@ tags: Golang, Web
 
 ## Others Involved
 
-<a href="https://humaidq.ae/" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Humaid</button></a>
+<a href="https://humaidq.ae/projects/platform/" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Humaid</button></a>
 
 ## Links
 
 <a href="https://github.com/hw-cs-reps/platform" class="no-raise" target="_blank" rel="noreferrer"><button class="button buttonHighlight">GitHub</button></a>
-
-*If you end up finding the site, please look, but do not touch. It is a production build actively being used. Thank you.*
 
 <center>
 
@@ -30,9 +28,9 @@ tags: Golang, Web
 
 ## Introduction
 
-I have been a Class Representative for three years in the Computer Science course at Heriot-Watt University, now moving into the Student Officer role. During my time I found it difficult to gauge the opinions of students on issues and to distribute information.
+I have been a Class Representative for three years in the Computer Science course at Heriot-Watt University, now moving into the School Officer role. During my time I found it difficult to gauge the opinions of students on issues and to distribute information.
 
-Thus, my fellow Class Rep, [Humaid](https://humaidq.ae), and I decided to build an online service which allows for students to submit anonymous tickets, complaints, and to see announcements from Class Reps. Currently there is no system provided by the university or Student Union (the organisation that we volunteer for) that offers any of these features in a convenient manner.
+Thus, my fellow Class Rep, [Humaid](https://humaidq.ae), and I decided to build an online service which allows for students to submit anonymous tickets, complaints, and to see announcements from Class Reps. At the time of writing, there is no system provided by the university or Student Union (the organisation that we volunteer for) that offers any of these features in a convenient manner.
 
 <center>
 
@@ -73,7 +71,7 @@ Humaid wrote a function that takes the first 25 words of the announcement to dis
 
 ### Ticketing System
 
-Platform has an anonymous ticketing system where students can create tickets (issues) that others may comment and upvote.
+Platform has an anonymous ticketing system where students can create tickets (issues) that others may comment on and upvote.
 
 <center>
 
