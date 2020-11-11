@@ -54,7 +54,7 @@ var linksArr = []link{
 	{Name: "Abdel", Description: "", FileName: "abdel.jpeg", URL: "https://elkabbany.xyz", ShortURL: "elkabbany.xyz"},
 	{Name: "Euan", Description: "", FileName: "euan.jpg", URL: "https://euangordon.me", ShortURL: "euangordon.me"},
 	{Name: "Humaid", Description: "", FileName: "humaid.jpg", URL: "https://humaidq.ae", ShortURL: "humaidq.ae"},
-	{Name: "Hutchie", Description: "", FileName: "hutchie.png", URL: "https://hutchie.scot", ShortURL: "hutchie.scot"},
+	{Name: "Hutchie", Description: "", FileName: "hutchie.jpg", URL: "https://hutchie.scot", ShortURL: "hutchie.scot"},
 	{Name: "James", Description: "", FileName: "james.jpg", URL: "https://jamesl.dev/", ShortURL: "jamesl.dev"},
 	{Name: "ReamSystems", Description: "", FileName: "reamsystems.png", URL: "https://ream.systems", ShortURL: "ream.systems"},
 	{Name: "Rikesh", Description: "Aspiring developer and designer", FileName: "rikesh.jpeg", URL: "http://rikeshmm.com", ShortURL: "rikeshmm.com"},
