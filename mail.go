@@ -11,7 +11,7 @@ import (
 func sendMail(subject, message string, ctx *macaron.Context) {
 	from := "me@alak.bar"
 	pass := os.Getenv("GPSSWRD")
-	to := "me@alak.bar"
+	to := "report@alak.bar"
 	msg := "From: " + from + "\n" + "To: " + to + "\n" + "Subject: " + subject + "\n\n" + message
 
 	err := smtp.SendMail("smtp.gmail.com:587", smtp.PlainAuth("", from, pass, "smtp.gmail.com"), from, []string{to}, []byte(msg))
