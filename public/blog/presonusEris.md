@@ -71,14 +71,14 @@ Taking into account the driver size, at 4.5" (11.43cm), it does a surprisingly g
 
 ## Media Consumption
 ### Music
-Throughout my year with the speakers, they've delivered a very enjoyable experience, handling every track that I've thrown at it. Each instrument/layer of the track is almost always distinguishable, though there have been moments where I've put on the [Audio-Technica ATH-M50x](https://www.audio-technica.com/cms/headphones/99aff89488ddd6b1/index.html) and noticed a part of the song that I missed when listening on the Eris.
+Throughout my year with the speakers, they've delivered a very enjoyable experience, handling every track that I've thrown at it. Each instrument/layer of the track is almost always distinguishable, though there have been moments where I've put on the Audio-Technica [ATH-M50x](https://www.audio-technica.com/cms/headphones/99aff89488ddd6b1/index.html) and noticed a part of the song that I missed when listening on the Eris.
 
 It's only during very challenging songs, such as [Harbinger by Mick Gordon](https://www.youtube.com/watch?v=b2YG8DX0ees), where the Eris struggles in keeping the output consistent. The mix of low and high frequencies simultaneously can cause the volume to slightly fluctuate, but this is an exceedingly rare occurrence.
 
 For those who enjoy a harder hitting bass and choose to tweak the equalizer may experience stronger volume fluctuations during the bass heavy parts.
 
 ### Movies
-I watched [Blade Runner 2049](https://en.wikipedia.org/wiki/Blade_Runner_2049) in the cinema and at home. The movie sounds phenomenal on the Eris, with the [distorted synth highs tearing through the rumbling lows](https://youtu.be/JbtswJzW4b0?t=44) in the sea wall chase scene.
+I watched [Blade Runner 2049](https://en.wikipedia.org/wiki/Blade_Runner_2049) in the cinema and at home. The movie sounds phenomenal on the Eris, with the [distorted synth](https://youtu.be/JbtswJzW4b0?t=44) in the sea wall chase scene.
 
 A subwoofer would be that cherry on top in those scenes and PreSonus recommend pairing the Eris E4.5 with their Temblor T8 subwoofer for those who want "...extra-deep low end...", but at ~£299 in online stores (mostly not available) it's out of my budget range.
 

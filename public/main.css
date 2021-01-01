@@ -129,20 +129,41 @@ h1, h2, h3, h4 {
   line-height: 1em;
 }
 h1 {
-  font-size: 3em;
-}
-h2 {
   font-size: 2em;
 }
+h2 {
+  font-size: 1.75em;
+}
 h3 {
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 h4 {
-  font-size: 1.25em;
+  font-size: 1.1em;
 }
 p {
   font-family: 'Inter var', sans-serif;
   margin: 0 0 20px 0;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.75em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  h2#post {
+    font-size: 2.75em;
+  }
+  h3 {
+    font-size: 1.25em;
+  }
+  h4 {
+    font-size: 1em;
+  }
+  .card-post-small #cardContent h2 {
+    font-size: 1.5em !important;
+  }
 }
 
 ul, li {
@@ -492,12 +513,12 @@ input[type=text], input[type=email], select, textarea {
 }
 
 .card-post-small {
-  height: 125px !important;
+  height: 115px !important;
   position: relative;
 }
 
 .card-post-small #cardContent h2 {
-  font-size: 36px;
+  font-size: 1.75em;
 }
 
 .card-post:hover #cardContent h2 {
