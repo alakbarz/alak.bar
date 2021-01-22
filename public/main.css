@@ -179,6 +179,10 @@ ul, li {
   margin-bottom: 0;
 }
 
+.spacer {
+  margin: 10px;
+}
+
 @media (prefers-color-scheme: dark) {
   ::-webkit-scrollbar-track {
     background: var(--dark);
@@ -285,6 +289,10 @@ ul, li {
   background-color: white;
   color: black;
   padding: 20px;
+}
+
+.featured-card > * {
+  border-radius: 15px !important;
 }
 
 .card-main#card-about {
