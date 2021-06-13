@@ -12,25 +12,25 @@ tags: 3D Printing, Golang, Video, Web
 
 <center>
 
-![The Nacdlow team](team.jpg)
-
-*The Nacdlow team*
-</center>
-
-## Nacdlow Team
-
-<a href="https://amaanakram.tech/" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Amaan</button></a>
-<a href="https://humaidq.ae/" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Humaid</button></a>
-<a href="https://www.linkedin.com/in/mark-bird-/" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Mark</button></a>
-<a href="https://github.com/n-ali1" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Numan</button></a>
-<a href="https://ruaridhmollica.com/" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Ruaridh</button></a>
-
-## Links
-
 <a href="https://demo.nacdlow.com" class="no-raise" target="_blank" rel="noreferrer"><button class="button buttonHighlight">Demo</button></a>
 <a href="https://nacdlow.com" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Website</button></a>
 <a href="https://github.com/Nacdlow" class="no-raise" target="_blank" rel="noreferrer"><button class="button">GitHub</button></a>
 <a href="https://www.youtube.com/watch?v=KMfItuTf2jQ" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Video</button></a>
+
+</center>
+
+<center>
+
+![The Nacdlow team](team.jpg)
+
+<a href="https://amaanakram.tech/" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Amaan</button></a>
+<a href="https://humaidq.ae/" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Humaid</button></a>
+<a href="https://github.com/n-ali1" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Numan</button></a>
+<a href="https://ruaridhmollica.com/" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Ruaridh</button></a>
+<a href="https://www.linkedin.com/in/mark-bird-/" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Mark</button></a>
+
+*The Nacdlow team*
+</center>
 
 <center>
 
@@ -40,7 +40,7 @@ tags: 3D Printing, Golang, Video, Web
 </center>
 
 ## Introduction
-From October 2019 through to April 2020, myself and five other students were tasked with creating a possible smart home system for the [Solar Decathlon Middle East 2020](https://www.solardecathlonme.com/) project. The SDME is a project in which teams compete to "...[design](https://www.hw.ac.uk/news/articles/2019/SolarDecathlon2020.htm), build and operate a grid-connected, solar powered house."
+From October 2019 through to April 2020, myself and five other students were tasked with creating a possible smart home system for the Solar Decathlon Middle East 2020 ([SDME](https://www.solardecathlonme.com/)) project. The SDME is a project in which teams compete to "...[design](https://www.hw.ac.uk/news/articles/2019/SolarDecathlon2020.htm), build and operate a grid-connected, solar powered house."
 
 During those 7 months we built Nacdlow and Iglü (stylised as "iglü") - a fictional company and product, respectively. This project consisted of:
 

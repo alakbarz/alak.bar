@@ -4,7 +4,7 @@ description: Online ticketing system, announcements, and resources for students
 date: 2020-08-29
 colourlight: b3b3b3
 colourdark: 101010
-tags: Golang, Web
+tags: Golang, Web Dev
 ---
 
 # Platform

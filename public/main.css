@@ -23,6 +23,9 @@
   font-named-instance: 'Italic';
   src: url("/font/Inter.var.woff2?v=3.13") format("woff2");
 }
+html {
+  scroll-behavior: smooth;
+}
 .main {
   -webkit-animation: fadein 0.5s ease; /* Safari, Chrome and Opera > 12.1 */
      -moz-animation: fadein 0.5s ease; /* Firefox < 16 */

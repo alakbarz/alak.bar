@@ -40,6 +40,8 @@ func projectsHandler(ctx *macaron.Context) {
 func projectsFileHandler(ctx *macaron.Context) {
 	name := ctx.Params("name")
 
+	postFound := false
+
 	for _, post := range projectsArr {
 		if post.FileName == name {
 			ctx.Data["HTML"] = template.HTML(post.HTML)
@@ -48,9 +50,16 @@ func projectsFileHandler(ctx *macaron.Context) {
 			ctx.Data["ColourDark"] = post.ColourDark
 			ctx.Data["Title"] = strings.Title(post.FileName)
 			ctx.Data["ProjDesc"] = post.Description
+			postFound = true
 		}
 	}
-	ctx.HTML(http.StatusOK, "post")
+
+	if postFound {
+		ctx.HTML(http.StatusOK, "post")
+	} else {
+		ctx.Data["Title"] = "Not Found"
+		ctx.HTML(http.StatusNotFound, "404")
+	}
 }
 
 func blogHandler(ctx *macaron.Context) {
@@ -65,6 +74,8 @@ func blogHandler(ctx *macaron.Context) {
 func blogFileHandler(ctx *macaron.Context) {
 	name := ctx.Params("name")
 
+	postFound := false
+
 	for _, post := range blogsArr {
 		if post.FileName == name {
 			ctx.Data["HTML"] = template.HTML(post.HTML)
@@ -73,9 +84,16 @@ func blogFileHandler(ctx *macaron.Context) {
 			ctx.Data["ColourDark"] = post.ColourDark
 			ctx.Data["Title"] = strings.Title(post.FileName)
 			ctx.Data["BlogDesc"] = post.Description
+			postFound = true
 		}
 	}
-	ctx.HTML(http.StatusOK, "post")
+
+	if postFound {
+		ctx.HTML(http.StatusOK, "post")
+	} else {
+		ctx.Data["Title"] = "Not Found"
+		ctx.HTML(http.StatusNotFound, "404")
+	}
 }
 
 func picsHandler(ctx *macaron.Context) {
