@@ -298,7 +298,7 @@ ul, li {
 }
 
 .card {
-  margin: 10px 0;
+  /* margin: 10px 0; */
   border-radius: var(--radius);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
   background-color: white;
@@ -371,12 +371,14 @@ ul, li {
 
 .nav {
   display: flex;
+  margin: 10px 0;
   justify-content: space-between;
   background-color: var(--background);
 }
 
 .footer {
   padding: 20px 20px 0 20px;
+  margin: 10px 0 0 0;
   text-align: center;
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
