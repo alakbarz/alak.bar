@@ -10,6 +10,6 @@ tags: Golang, Web Dev
 # alak.bar
 *Making a website from scratch using Macaron and Golang*
 
-<a href="https://github.com/alakbarz/alak.bar" class="no-raise" target="_blank" rel="noreferrer"><button class="button buttonHighlight">GitHub</button></a>
+<a href="https://github.com/alakbarz/alak.bar" class="button buttonHighlight no-raise" target="_blank" rel="noreferrer">GitHub</a>
 
 You're looking at this project as we speak!

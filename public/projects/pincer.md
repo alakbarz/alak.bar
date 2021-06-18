@@ -11,8 +11,8 @@ tags: Android, Flutter
 *A lightweight [Lobste.rs](https://lobste.rs/) reader*
 
 ## Links
-<a href="https://play.google.com/store/apps/details?id=bar.alak.pincer" class="no-raise" target="_blank" rel="noreferrer"><button class="button buttonHighlight">Play Store</button></a>
-<a href="https://github.com/alakbarz/pincer" class="no-raise" target="_blank" rel="noreferrer"><button class="button">GitHub</button></a>
+<a href="https://play.google.com/store/apps/details?id=bar.alak.pincer" class="button buttonHighlight no-raise" target="_blank" rel="noreferrer">Play Store</a>
+<a href="https://github.com/alakbarz/pincer" class="button no-raise" target="_blank" rel="noreferrer">GitHub</a>
 
 ![Trending page of Pincer](trending.png)
 

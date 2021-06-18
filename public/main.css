@@ -23,9 +23,6 @@
   font-named-instance: 'Italic';
   src: url("/font/Inter.var.woff2?v=3.13") format("woff2");
 }
-html {
-  scroll-behavior: smooth;
-}
 .main {
   -webkit-animation: fadein 0.5s ease; /* Safari, Chrome and Opera > 12.1 */
      -moz-animation: fadein 0.5s ease; /* Firefox < 16 */
@@ -76,6 +73,7 @@ html {
 }
 * {
   box-sizing: border-box;
+  outline-offset: 5px;
 }
 html {
   font-family: 'Inter', sans-serif;
@@ -100,6 +98,10 @@ body {
 a {
   text-decoration: none;
   color: var(--accent);
+  border-radius: var(--radius);
+}
+a.card {
+  display: block;
 }
 p a, ul a, ol a, td a, .footer a {
   display: inline-block;
@@ -146,6 +148,23 @@ h4 {
 p {
   font-family: 'Inter var', sans-serif;
   margin: 0 0 20px 0;
+}
+
+/* OUTLINE ON HOVER/FOCUS */
+input, textarea, a, .btn, select {
+  outline: solid 0 rgba(245, 0, 87, 0.5);
+  transition: outline 0.1s ease;
+}
+/* input:hover, textarea:hover, a:hover, .btn:hover, select:hover {
+  outline: solid 5px rgba(245, 0, 87, 0.5);
+  transition: outline 0.1s ease;
+} */
+input:focus, textarea:focus, a:focus, .btn:focus, select:focus {
+  outline: solid 5px var(--accent);
+  transition: outline 0.1s ease;
+}
+a.featured-card {
+  border-radius: 15px;
 }
 
 @media (max-width: 768px) {
@@ -493,6 +512,8 @@ input[type=text], input[type=email], select, textarea {
   border: 3px solid var(--accent);
   border-radius: var(--radius);
   cursor: pointer;
+  display: inline-block;
+  text-shadow: none !important;
 }
 
 .button:hover {

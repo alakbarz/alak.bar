@@ -12,10 +12,10 @@ tags: 3D Printing, Golang, Video, Web
 
 <center>
 
-<a href="https://demo.nacdlow.com" class="no-raise" target="_blank" rel="noreferrer"><button class="button buttonHighlight">Demo</button></a>
-<a href="https://nacdlow.com" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Website</button></a>
-<a href="https://github.com/Nacdlow" class="no-raise" target="_blank" rel="noreferrer"><button class="button">GitHub</button></a>
-<a href="https://www.youtube.com/watch?v=KMfItuTf2jQ" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Video</button></a>
+<a href="https://demo.nacdlow.com" class="button buttonHighlight no-raise" target="_blank" rel="noreferrer">Demo</a>
+<a href="https://nacdlow.com" class="button no-raise" target="_blank" rel="noreferrer">Website</a>
+<a href="https://github.com/Nacdlow" class="button no-raise" target="_blank" rel="noreferrer">GitHub</a>
+<a href="https://www.youtube.com/watch?v=KMfItuTf2jQ" class="button no-raise" target="_blank" rel="noreferrer">Video</a>
 
 </center>
 
@@ -23,11 +23,11 @@ tags: 3D Printing, Golang, Video, Web
 
 ![The Nacdlow team](team.jpg)
 
-<a href="https://amaanakram.tech/" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Amaan</button></a>
-<a href="https://humaidq.ae/" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Humaid</button></a>
-<a href="https://github.com/n-ali1" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Numan</button></a>
-<a href="https://ruaridhmollica.com/" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Ruaridh</button></a>
-<a href="https://www.linkedin.com/in/mark-bird-/" class="no-raise" target="_blank" rel="noreferrer"><button class="button">Mark</button></a>
+<a href="https://amaanakram.tech/" class="button no-raise" target="_blank" rel="noreferrer">Amaan</a>
+<a href="https://humaidq.ae/" class="button no-raise" target="_blank" rel="noreferrer">Humaid</a>
+<a href="https://github.com/n-ali1" class="button no-raise" target="_blank" rel="noreferrer">Numan</a>
+<a href="https://ruaridhmollica.com/" class="button no-raise" target="_blank" rel="noreferrer">Ruaridh</a>
+<a href="https://www.linkedin.com/in/mark-bird-/" class="button no-raise" target="_blank" rel="noreferrer">Mark</a>
 
 *The Nacdlow team*
 </center>
@@ -88,7 +88,7 @@ I would also like to thank the [Edinburgh Hacklab](https://edinburghhacklab.com/
 
 The marketplace allows users to download free and paid plugins for their smart home. These plugins can add practically an endless amount of customisation to iglü due to the nature of the plugin API. Humaid even got it [connected to LIFX bulbs](https://youtu.be/KMfItuTf2jQ?t=381), toggling his lights on and off! *Within iglü!*
 
-<a href="https://market.nacdlow.com" class="no-raise" target="_blank" rel="noreferrer"><button class="button buttonHighlight">market.nacdlow.com</button></a>
+<a href="https://market.nacdlow.com" class="button buttonHighlight no-raise" target="_blank" rel="noreferrer">market.nacdlow.com</a>
 
 
 <center>
@@ -118,7 +118,7 @@ I like to take any opporunity that I can get in order to improve my creative ski
 - iglü modelling and rendering
 - Video editing and motion graphics
 
-<a href="https://www.youtube.com/watch?v=KMfItuTf2jQ" class="no-raise" target="_blank" rel="noreferrer"><button class="button buttonHighlight">Video</button></a>
+<a href="https://www.youtube.com/watch?v=KMfItuTf2jQ" class="button buttonHighlight no-raise" target="_blank" rel="noreferrer">Video</a>
 
 <center>
 
@@ -131,7 +131,7 @@ I like to take any opporunity that I can get in order to improve my creative ski
 
 If you would like more information about what went into making iglü, especially regarding the technical aspects, you can check out the team leader's post.
 
-<a href="https://humaidq.ae/projects/iglu/" class="no-raise" target="_blank" rel="noreferrer"><button class="button buttonHighlight">Humaid's post</button></a>
+<a href="https://humaidq.ae/projects/iglu/" class="button buttonHighlight no-raise" target="_blank" rel="noreferrer">Humaid's post</a>
 
 <center>
 
