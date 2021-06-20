@@ -1,12 +1,13 @@
 {{template "base/header" .}}
 <div class="card-main">
   <h1>Links</h1>
-  <p class="no-bot-margin">Need some inspiration for your website? Below are links to sites made by Heriot-Watt students in my year.</p>
+  <p class="no-bot-margin">Need some inspiration for your website? Below are links to sites made by Heriot-Watt students
+    in my year.</p>
 </div>
 {{range .Links}}
-<div class="card">
+<div class="card card-table">
   <table>
-    <tr>
+    <tr class="linksTableRow">
       <td class="linksTableImage">
         <img class="linksImage" src="img/links/{{.FileName}}" alt="{{.Name}}">
       </td>
