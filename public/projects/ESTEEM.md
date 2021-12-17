@@ -1,7 +1,7 @@
 ---
 title: Team ESTEEM
 description: University students from the UK tackling sustainable housing
-date: 2020-06-15
+date: 2021-08-16
 colourlight: 009877
 colourdark: 004032
 tags: Blender, Graphic Design, ReactJS, Video, Web Dev
@@ -60,6 +60,3 @@ I had been wanting to remake the website, but alone I did not feel confident tha
 <a href="https://teamesteem.co.uk" class="button buttonHighlight no-raise" target="_blank" rel="noreferrer">Website</a>
 
 We decided to use ReactJS due to its popularity in the web dev scene and to use it as an opportunity to advance our own skills. In hindsight, React is overkill for a project like this!
-
-## Rebranding
-
