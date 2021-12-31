@@ -72,6 +72,8 @@ func main() {
 	c.AddFunc("@daily", func() { go updateDescriptions() })
 	c.Start()
 	go updateDescriptions()
+	go getPosts("public/projects/")
+	go getPosts("public/blog/")
 	m.Get("/", homeHandler)
 	m.Post("/", csrf.Validate, binding.Bind(contactForm{}), homeHandlerPOST)
 	m.Get("/projects", projectsHandler)

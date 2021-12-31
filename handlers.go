@@ -30,8 +30,6 @@ func homeHandlerPOST(ctx *macaron.Context, form contactForm) {
 
 func projectsHandler(ctx *macaron.Context) {
 	ctx.Data["Title"] = "Projects"
-	projectsArr = nil
-	getPosts("public/projects/")
 	sort.Sort(byDate(projectsArr))
 	ctx.Data["Projects"] = projectsArr
 	ctx.HTML(http.StatusOK, "projects")
@@ -64,8 +62,6 @@ func projectsFileHandler(ctx *macaron.Context) {
 
 func blogHandler(ctx *macaron.Context) {
 	ctx.Data["Title"] = "Blog"
-	blogsArr = nil
-	getPosts("public/blog/")
 	sort.Sort(byDate(blogsArr))
 	ctx.Data["Blog"] = blogsArr
 	ctx.HTML(http.StatusOK, "blog")
