@@ -8,7 +8,7 @@ tags: Blender, Graphic Design, ReactJS, Video, Web Dev
 ---
 
 # Team ESTEEM
-*UK finalists tackling sustainable housing project*
+*UK finalists from Heriot-Watt University taking part in SDME competition, tackling sustainable housing*
 
 <center>
 
@@ -22,9 +22,9 @@ tags: Blender, Graphic Design, ReactJS, Video, Web Dev
 
 <center>
 
-![Team ESTEEM members in 2019](teamesteem.jpg)
+![Team ESTEEM members at construction site](esteemgroup.jpg)
 
-*Team ESTEEM members in 2019*
+*Some of the Team ESTEEM members at the construction site*
 </center>
 
 ## Who Are Team <span style="color: #009877">ESTEEM</span>?
@@ -35,9 +35,9 @@ The group formed back in August 2018, though I only joined them in the summer of
 
 <center>
 
-![Render of the ESTEEM home (copyright Alpha Arquitectos)](render1.jpg)
+![Render of the ESTEEM home (© Alpha Arquitectos)](render1.jpg)
 
-*Render of the ESTEEM home (copyright Alpha Arquitectos)*
+*Render of the ESTEEM home (© Alpha Arquitectos)*
 </center>
 
 ## What Do <span style="color: #009877">ESTEEM</span> Do?
@@ -46,17 +46,24 @@ We're designing and building a sustainable, eco-friendly, solar powered home fro
 
 <center>
 
-![Render of the ESTEEM home (copyright Alpha Arquitectos)](render2.jpg)
+![Render of the ESTEEM home (© Alpha Arquitectos)](render2.jpg)
 
-*Render of the ESTEEM home (copyright Alpha Arquitectos)*
+*Render of the ESTEEM home (© Alpha Arquitectos)*
 </center>
 
 ## Website Redesign
 
-Before I joined the team, WordPress was used to create a website that allowed people without web development experience to update the content of pages. The only problem was that even people with web dev experience found it difficult to use. This left the website looking quite messy with inconsistencies from page to page, not to mention the unwillingness of members to make edits when needed.
+Before I joined the team, WordPress was used because it allowed for people without web development experience to update the contents of pages. The only problem was that people found it difficult to use. This left the website looking quite messy with inconsistencies from page to page, not to mention the unwillingness of members to make edits when needed.
 
-I had been wanting to remake the website, but alone I did not feel confident that I would be able to find the time. This led to the recruitment of [Mohit](https://www.linkedin.com/in/mohit-katta/) and [Pranav](https://www.linkedin.com/in/pranav-chachara/), two computer science students at the Dubai campus of Heriot-Watt.
+I had been wanting to remake the website, but alone I did not feel confident that I would be able to find the time. This led to the recruitment of [Mohit](https://www.linkedin.com/in/mohit-katta/) and [Pranav](https://www.linkedin.com/in/pranav-chachara/), two Computer Science students at the Dubai campus of Heriot-Watt.
 
-<a href="https://teamesteem.co.uk" class="button buttonHighlight no-raise" target="_blank" rel="noreferrer">Website</a>
+<center>
 
-We decided to use ReactJS due to its popularity in the web dev scene and to use it as an opportunity to advance our own skills. In hindsight, React is overkill for a project like this!
+![Render of the ESTEEM home (© Alpha Arquitectos)](esteemwebsite.jpg)
+
+*The new Team ESTEEM website*
+</center>
+
+<a href="https://teamesteem.co.uk" class="button buttonHighlight no-raise" target="_blank" rel="noreferrer">teamesteem.co.uk</a>
+
+We decided to use ReactJS due to its popularity in the web dev scene and to use it as an opportunity to advance our own skills. In hindsight, React is overkill for a project like this; a simple static website would have been enough! Regardless, the experience was worth it.
