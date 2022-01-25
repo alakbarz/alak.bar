@@ -29,7 +29,7 @@ tags: Blender, Graphic Design, ReactJS, Video, Web Dev
 
 ## Who Are Team <span style="color: #009877">ESTEEM</span>?
 
-Team ESTEEM are a group of students from Heriot-Watt Universty taking on the Solar Decathlon Middle East 2020 ([SDME](https://www.solardecathlonme.com/)) project. There are roughly 120 students in this group, ranging from engineering, business, computer science, and so much more! 
+Team ESTEEM are a group of students from Heriot-Watt University taking on the Solar Decathlon Middle East 2020 ([SDME](https://www.solardecathlonme.com/)) project. There are roughly 120 students in this group, ranging from engineering, business, computer science, and so much more! 
 
 The group formed back in August 2018, though I only joined them in the summer of 2020. As I grew increasingly invested in the team, I took on greater responsibilities; I am now Head of the Audiovisual and Website teams whilst helping out the Software & Sensors team when I can.
 
