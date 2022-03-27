@@ -131,7 +131,7 @@ I like to take any opporunity that I can get in order to improve my creative ski
 
 If you would like more information about what went into making iglü, especially regarding the technical aspects, you can check out the team leader's post.
 
-<a href="https://humaidq.ae/projects/iglu/" class="button buttonHighlight no-raise" target="_blank" rel="noreferrer">Humaid's post</a>
+<a href="https://huma.id/projects/iglu/" class="button buttonHighlight no-raise" target="_blank" rel="noreferrer">Humaid's post</a>
 
 <center>
 

@@ -3,7 +3,7 @@ title: Team ESTEEM
 description: University students from the UK tackling sustainable housing
 date: 2021-08-16
 colourlight: 009877
-colourdark: 004032
+colourdark: 00261d
 tags: Blender, Graphic Design, ReactJS, Video, Web Dev
 ---
 
@@ -20,35 +20,58 @@ tags: Blender, Graphic Design, ReactJS, Video, Web Dev
 
 </center>
 
+<div class="youtube-video-container">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PT8aveu2Asg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+## Who Are Team <span style="color: #009877">ESTEEM</span>?
+
+Team ESTEEM are a group of students from Heriot-Watt Universty taking on the Solar Decathlon Middle East 2021 ([SDME](https://www.solardecathlonme.com/)) project. There are roughly 120 students in this group, ranging from engineering, business, computer science, and so much more! 
+
 <center>
 
-![Team ESTEEM members at construction site](esteemgroup.jpg)
+![Some of the Team ESTEEM members at the construction site](esteemgroup.jpg)
 
 *Some of the Team ESTEEM members at the construction site*
 </center>
 
-## Who Are Team <span style="color: #009877">ESTEEM</span>?
-
-Team ESTEEM are a group of students from Heriot-Watt Universty taking on the Solar Decathlon Middle East 2020 ([SDME](https://www.solardecathlonme.com/)) project. There are roughly 120 students in this group, ranging from engineering, business, computer science, and so much more! 
-
-The group formed back in August 2018, though I only joined them in the summer of 2020. As I grew increasingly invested in the team, I took on greater responsibilities; I am now Head of the Audiovisual and Website teams whilst helping out the Software & Sensors team when I can.
+The group formed back in August 2018, though I only joined them in the summer of 2020. As I grew increasingly invested in the team, I took on more and more. I was the Audiovisual Lead and Website Lead, also working on the Software & Sensors team for the building management system.
 
 <center>
 
-![Render of the ESTEEM home (© Alpha Arquitectos)](render1.jpg)
+![The finished ESTEEM house at the Solar Park](finishedhouse.jpg)
 
-*Render of the ESTEEM home (© Alpha Arquitectos)*
+*The finished ESTEEM house at the Solar Park*
 </center>
 
-## What Do <span style="color: #009877">ESTEEM</span> Do?
-
-We're designing and building a sustainable, eco-friendly, solar powered home from the ground up. We're finding our own sponsors to help fund the project and, with help from the university, we plan to showcase our prototype at the World Expo in Dubai around October 2021!
+We designed and built a sustainable, eco-friendly, solar powered home from the ground up. We found our own sponsors to help fund the project and, with help from the university, we showcased our prototype in Dubai in November of 2021.
 
 <center>
 
-![Render of the ESTEEM home (© Alpha Arquitectos)](render2.jpg)
+![The living room inside our house](finishedhouseinside.jpg)
 
-*Render of the ESTEEM home (© Alpha Arquitectos)*
+*The living room inside our house*
+</center>
+
+I'll go through the journey in chronological order from my perspective, starting from the summer of 2020 till the end of 2021.
+
+<!-- ## 2020 · I Wish I Had Joined Sooner
+
+I'm the kind of person that loves an environment where I can do a wide range of tasks and ESTEEM was the perfect project for me. -->
+
+## Constructing The Parts (Summer 2021)
+
+### Vision: a Podcast by Team ESTEEM
+
+We created a podcast to share the knowledge of the members and inspire younger folks looking to get into a competition like this.
+
+I made the cover art of the podcast using Blender.
+
+<center>
+
+![Our podcast that we released on Spotify](podcast.jpg)
+
+*Vision: our podcast that we released on Spotify*
 </center>
 
 ## Website Redesign
@@ -59,7 +82,7 @@ I had been wanting to remake the website, but alone I did not feel confident tha
 
 <center>
 
-![Render of the ESTEEM home (© Alpha Arquitectos)](esteemwebsite.jpg)
+![The new Team ESTEEM website](esteemwebsite.jpg)
 
 *The new Team ESTEEM website*
 </center>
@@ -67,3 +90,37 @@ I had been wanting to remake the website, but alone I did not feel confident tha
 <a href="https://teamesteem.co.uk" class="button buttonHighlight no-raise" target="_blank" rel="noreferrer">teamesteem.co.uk</a>
 
 We decided to use ReactJS due to its popularity in the web dev scene and to use it as an opportunity to advance our own skills. In hindsight, React is overkill for a project like this; a simple static website would have been enough! Regardless, the experience was worth it.
+
+## Made in the UK by Students!
+
+Unlike many of the other teams in the competition, we made manufactured a large proportion of our house ourselves (with the help of others of course!).
+
+### Making the CLT Panels at CSIC
+
+Our house uses Scottish wood in our cross-laminated timber (CLT) which we cut and glued with the help of [CSIC](https://www.cs-ic.org/) at their Innovation Factory in Glasgow. Check out the video below to see the process!
+
+<div class="youtube-video-container">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ElLMHfb58C8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+### Making the Cassettes at HWU
+
+Cassettes are what we called the boxes of insulation that we would attach to our house. These would primarily keep the house cool in the blistering heat of Dubai, with the added benefit of being quite opaque to noise. We used hemp insulation inside of them as it was safe to handle for us and also sustainable because it's made from plant fibres.
+
+<center>
+
+![Red insulation cassettes attached to our house](cassette.jpg)
+
+*Red insulation cassettes attached to our house*
+</center>
+
+We ended up having some issues with these cassettes. They were made to be easily packed into a container for shipping and simply attached/removed from the house; only the former held true for us.
+
+<center>
+
+![Me cutting OSB for the cassettes of our house](hwualakbar.jpg)
+
+*Me cutting the backs of the cassettes of our house*
+</center>
+
+We used the Rothoblaas LOCK T system to attach the cassettes to the house, but this was very tricky to do as we were using the LOCK T beyond its intended purpose. Think of it like trying to plug an HDMI cable into the back of a TV without looking.
