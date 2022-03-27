@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"io/ioutil"
 	"strings"
 
@@ -9,6 +10,7 @@ import (
 )
 
 func getPosts(directory string) {
+	projectsArr = nil
 	files, _ := ioutil.ReadDir(directory)
 
 	for _, file := range files {
@@ -62,6 +64,9 @@ func getPosts(directory string) {
 			blogsArr = append(blogsArr, fields)
 		}
 	}
+
+	fmt.Println("Updated projects")
+
 }
 
 func (d byDate) Len() int {

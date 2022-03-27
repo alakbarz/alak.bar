@@ -38,6 +38,8 @@ func projectsHandler(ctx *macaron.Context) {
 func projectsFileHandler(ctx *macaron.Context) {
 	name := ctx.Params("name")
 
+	getPosts("public/projects/")
+
 	postFound := false
 
 	for _, post := range projectsArr {
