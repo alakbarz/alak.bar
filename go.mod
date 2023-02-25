@@ -9,8 +9,7 @@ require (
 	github.com/gomarkdown/markdown v0.0.0-20200609195525-3f9352745725
 	github.com/metakeule/fmtdate v1.1.2
 	github.com/robfig/cron v1.2.0
-	github.com/robfig/cron/v3 v3.0.0 // indirect
-	golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9
-	golang.org/x/net v0.0.0-20200813134508-3edf25e44fcc
+	golang.org/x/crypto v0.1.0 // indirect
+	golang.org/x/net v0.1.0
 	gopkg.in/macaron.v1 v1.3.9
 )
