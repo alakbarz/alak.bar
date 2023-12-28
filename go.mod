@@ -10,6 +10,6 @@ require (
 	github.com/metakeule/fmtdate v1.1.2
 	github.com/robfig/cron v1.2.0
 	golang.org/x/crypto v0.17.0 // indirect
-	golang.org/x/net v0.10.0
+	golang.org/x/net v0.17.0
 	gopkg.in/macaron.v1 v1.3.9
 )
