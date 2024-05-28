@@ -9,7 +9,7 @@ import (
 )
 
 func sendMail(subject, message string, ctx *macaron.Context) {
-	from := "me@alak.bar"
+	from := "hello@alak.bar"
 	pass := os.Getenv("GPSSWRD")
 	to := "report@alak.bar"
 	msg := "From: " + from + "\n" + "To: " + to + "\n" + "Subject: " + subject + "\n\n" + message
